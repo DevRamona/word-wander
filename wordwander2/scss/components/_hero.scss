@@ -1,0 +1,56 @@
+@use '../variables' as vars;
+@use '../mixins' as *;
+
+.hero {
+    background-color: vars.$primary-color;
+    min-height: calc(100vh - 80px);
+    padding: vars.$spacing-base * 2 0;
+  
+    &__container {
+      @include container;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: vars.$spacing-base * 2;
+  
+      @include responsive(vars.$breakpoint-md) {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  
+    &__content {
+      flex: 1;
+      max-width: 600px;
+    }
+  
+    &__title {
+      color: vars.$white;
+      font-size: vars.$font-size-h1;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: vars.$spacing-base * 1.5;
+    }
+  
+    &__text {
+      color: rgba(vars.$white, 0.9);
+      font-size: 1.3rem;
+      margin-bottom: vars.$spacing-base * 2;
+    }
+  
+    &__image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  
+    .btn--start {
+      @include button(vars.$secondary-color);
+    }
+  }

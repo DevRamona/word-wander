@@ -1,0 +1,35 @@
+@use 'variables' as vars;
+@use "sass:color";
+@mixin container {
+    max-width: vars.$container-width;
+    margin: 0 auto;
+    padding: 0 vars.$spacing-base * 2;
+  }
+  
+  @mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @mixin button($bg-color: vars.$primary-color) {
+    padding: vars.$spacing-base * 0.8 vars.$spacing-base * 2;
+    background-color: $bg-color;
+    color: vars.$white;
+    border: none;
+    border-radius: vars.$border-radius;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+        background-color: color.adjust($bg-color, $lightness: -10%);
+  
+    }
+  }
+  
+  @mixin responsive($breakpoint) {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }

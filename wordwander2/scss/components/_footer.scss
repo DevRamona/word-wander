@@ -1,0 +1,128 @@
+@use '../mixins' as *;
+@use '../variables' as vars;
+.main-footer {
+    background: linear-gradient(180deg, vars.$primary-color 0%, vars.$primary-color 100%);
+    color: vars.$white;
+    padding-top: vars.$spacing-base * 1.5;
+    margin-top: vars.$spacing-base * 3.5;
+  
+    .footer-content {
+      @include container;
+      padding: vars.$spacing-base * 2 0;
+  
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: vars.$spacing-base * 4;
+  
+        @include responsive(vars.$breakpoint-lg) {
+          grid-template-columns: 1fr 1fr;
+          gap: vars.$spacing-base * 2;
+        }
+  
+        @include responsive(vars.$breakpoint-md) {
+          grid-template-columns: 1fr;
+        }
+      }
+  
+      .footer-about {
+        .footer-tagline {
+          font-size: 1rem;
+          line-height: 1.6;
+        }
+      }
+  
+      .footer-title {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: vars.$spacing-base;
+      }
+  
+      .footer-links {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          margin-bottom: vars.$spacing-base * 0.5;
+  
+          a {
+            color: vars.$white;
+            transition: opacity 0.3s ease;
+  
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+  
+      .contact-list {
+        list-style: none;
+        padding: 0;
+  
+        .contact-item {
+          display: flex;
+          align-items: center;
+          gap: vars.$spacing-base * 0.25;
+          margin-bottom: vars.$spacing-base * 0.5;
+  
+          .contact-icon {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  
+    .social-links {
+      display: flex;
+      gap: vars.$spacing-base * 0.75;
+      padding: vars.$spacing-base * 0.5;
+  
+      .social-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: vars.$border-radius * 0.5;
+        transition: opacity 0.3s ease;
+  
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  
+    .footer-bottom {
+      border-top: 0.5px solid vars.$white;
+      padding: vars.$spacing-base * 1.2 vars.$spacing-base * 4.5;
+      margin-top: vars.$spacing-base * 0.5;
+  
+      .footer-wrapper {
+        @include container;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        @include responsive(vars.$breakpoint-md) {
+          flex-direction: column;
+          gap: vars.$spacing-base;
+          text-align: center;
+        }
+  
+        .copyright {
+          font-size: 0.75rem;
+          font-weight: 600;
+          letter-spacing: 0.8px;
+        }
+  
+        .legal-links {
+          display: flex;
+          gap: vars.$spacing-base * 0.5;
+  
+          .legal-link {
+            color: vars.$white;
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
