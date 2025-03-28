@@ -1,0 +1,169 @@
+// Interactive Elements Styling
+.course-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    .course-info {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0;
+
+        span {
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+    }
+
+    .course-progress {
+        height: 8px;
+        background: var(--progress-bg);
+        border-radius: 4px;
+        margin: 15px 0;
+        overflow: hidden;
+
+        .progress-bar {
+            height: 100%;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+    }
+
+    .start-course {
+        width: 100%;
+        padding: 12px;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background: var(--primary-dark);
+        }
+    }
+}
+
+.question-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+
+    h4 {
+        margin-bottom: 20px;
+        color: var(--text-primary);
+    }
+
+    .options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+
+        .option {
+            padding: 15px;
+            background: var(--option-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: var(--option-hover);
+                border-color: var(--primary-color);
+            }
+
+            &.selected {
+                background: var(--primary-color);
+                color: white;
+                border-color: var(--primary-color);
+            }
+
+            &.correct {
+                background: var(--success-color);
+                color: white;
+                border-color: var(--success-color);
+            }
+
+            &.incorrect {
+                background: var(--error-color);
+                color: white;
+                border-color: var(--error-color);
+            }
+        }
+    }
+}
+
+// Form Styling
+.form-group {
+    margin-bottom: 20px;
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--text-primary);
+    }
+
+    input, select {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid var(--border-color);
+        border-radius: 6px;
+        background: var(--input-bg);
+        color: var(--text-primary);
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+    }
+}
+
+// Theme Toggle
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+        display: none;
+
+        & + .toggle {
+            width: 50px;
+            height: 26px;
+            background: var(--toggle-bg);
+            border-radius: 13px;
+            position: relative;
+            transition: background 0.3s ease;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background: white;
+                border-radius: 50%;
+                top: 3px;
+                left: 3px;
+                transition: transform 0.3s ease;
+            }
+        }
+
+        &:checked + .toggle {
+            background: var(--primary-color);
+
+            &::after {
+                transform: translateX(24px);
+            }
+        }
+    }
+} 

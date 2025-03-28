@@ -1,18 +1,25 @@
 {
-  "name": "wordwander2",
+  "name": "wordwander",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Language learning platform",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass scss/main.scss:css/main.css --watch"
-
+    "start": "concurrently \"npm run sass\" \"npm run serve\" \"npm run api\"",
+    "sass": "sass --watch scss:css",
+    "serve": "live-server --port=5500",
+    "api": "json-server --watch db.json --port 3000"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "json-server": "^0.17.4"
+  },
   "devDependencies": {
-    "sass": "^1.86.0"
+    "concurrently": "^8.2.2",
+    "live-server": "^1.2.2",
+    "sass": "^1.71.1"
   }
 }

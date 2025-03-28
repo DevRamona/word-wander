@@ -1,4 +1,3 @@
-
 @use 'variables';
 @use 'mixins';
 @use 'reset';
@@ -8,4 +7,205 @@
 @use 'components/features';
 @use 'components/courses';
 @use 'components/footer';
-@use "components/language-cards"
+@use 'components/language-cards' as *;
+@use 'components/interactive' ;
+@use 'components/login' ;	
+// Variables
+:root {
+    // Light theme (default)
+    --primary-color: #8A2BE2;
+    --primary-dark: #6B1FA8;
+    --background: #FFFFFF;
+    --card-bg: #F8F9FA;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --border-color: #E0E0E0;
+    --input-bg: #FFFFFF;
+    --option-bg: #F8F9FA;
+    --option-hover: #F0F0F0;
+    --progress-bg: #E9ECEF;
+    --toggle-bg: #DDD;
+    --success-color: #28A745;
+    --error-color: #DC3545;
+}
+
+// Dark theme
+[data-theme="dark"] {
+    --background: #1A1A1A;
+    --card-bg: #2D2D2D;
+    --text-primary: #FFFFFF;
+    --text-secondary: #CCCCCC;
+    --border-color: #404040;
+    --input-bg: #333333;
+    --option-bg: #404040;
+    --option-hover: #505050;
+    --progress-bg: #404040;
+    --toggle-bg: #404040;
+}
+
+// Base styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+}
+
+
+// Layout
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+// Header
+.header {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__logo {
+            img {
+                height: 40px;
+            }
+        }
+
+        &__menu {
+            ul {
+                display: flex;
+                gap: 2rem;
+                list-style: none;
+
+                a {
+                    color: var(--text-primary);
+                    text-decoration: none;
+                    font-weight: 500;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: var(--primary-color);
+                    }
+                }
+            }
+        }
+
+        &__actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            .language-selector {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                cursor: pointer;
+
+                span {
+                    font-weight: 500;
+                }
+
+                img {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+
+            .user-profile {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+// User Profile
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .user-info {
+        .name {
+            font-weight: 600;
+        }
+
+        .email {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .header {
+        .nav {
+            &__menu {
+                display: none;
+            }
+        }
+    }
+
+    .course-card {
+        .course-info {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    .question-card {
+        .options {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+// Accessibility
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+// Focus styles for keyboard navigation
+:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}

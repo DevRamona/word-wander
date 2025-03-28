@@ -1,0 +1,71 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Maya Atay",
+      "email": "mayaatay4400@gmail.com",
+      "progress": {
+        "english": 32,
+        "french": 0,
+        "kinyarwanda": 0
+      },
+      "preferences": {
+        "theme": "light",
+        "language": "en"
+      }
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "Learning historical words and sentences",
+      "language": "english",
+      "level": "Advanced",
+      "lessons": 6,
+      "students": 198,
+      "points": 25,
+      "days": 56,
+      "teacher": "Jon Kantner",
+      "role": "Writer"
+    },
+    {
+      "id": 2,
+      "title": "Basic English Grammar",
+      "language": "english",
+      "level": "Beginner",
+      "lessons": 10,
+      "students": 245,
+      "points": 30,
+      "days": 30,
+      "teacher": "Lasi Kamil",
+      "role": "Teacher"
+    }
+  ],
+  "lessons": [
+    {
+      "id": 1,
+      "courseId": 1,
+      "title": "Past Tense Verbs",
+      "content": [
+        {
+          "type": "question",
+          "text": "I _______ dinner when the phone rang.",
+          "options": ["cooked", "had cooked", "have cooked", "was cooking"],
+          "correct": "was cooking"
+        }
+      ],
+      "progress": 0
+    }
+  ],
+  "progress": [
+    {
+      "id": 1,
+      "userId": 1,
+      "courseId": 1,
+      "lessonId": 1,
+      "completed": false,
+      "score": 0,
+      "lastAccessed": "2024-03-27T12:00:00Z"
+    }
+  ]
+} 
