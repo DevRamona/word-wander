@@ -1,0 +1,303 @@
+// _courses.scss
+
+// Variables
+$primary-color: #8A2BE2;
+$secondary-color: #F8F7FE;
+$text-primary: #333333;
+$text-secondary: #666666;
+$border-color: #E0E0E0;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin card-shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+// Courses Grid
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+// Course Card
+.course-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    @include card-shadow;
+
+    .course-image {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .course-content {
+        padding: 1.5rem;
+
+        h3 {
+            font-size: 1.1rem;
+            color: $text-primary;
+            margin-bottom: 1rem;
+        }
+
+        .course-info {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+
+            .info-item {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                color: $text-secondary;
+                font-size: 0.9rem;
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+        .course-progress {
+            margin-bottom: 1rem;
+
+            .progress-bar {
+                width: 100%;
+                height: 4px;
+                background: $secondary-color;
+                border-radius: 2px;
+                overflow: hidden;
+
+                .progress {
+                    height: 100%;
+                    background: $primary-color;
+                    border-radius: 2px;
+                }
+            }
+        }
+
+        .course-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .start-course {
+                background: $primary-color;
+                color: white;
+                border: none;
+                padding: 0.75rem 1.5rem;
+                border-radius: 25px;
+                cursor: pointer;
+                font-weight: 500;
+                transition: background 0.3s ease;
+
+                &:hover {
+                    background: darken($primary-color, 10%);
+                }
+            }
+
+            .course-rating {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                color: $text-secondary;
+
+                .star {
+                    color: #FFD700;
+                }
+            }
+        }
+    }
+}
+
+// Page Title
+.page-title {
+    font-size: 1.5rem;
+    color: $text-primary;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+// Responsive Design
+@media (max-width: 1200px) {
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .course-card {
+        .course-content {
+            .course-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    }
+}
+
+// Variables
+$primary-color: #8A2BE2;
+$secondary-color: #F8F7FE;
+$text-primary: #333333;
+$text-secondary: #666666;
+$border-color: #E0E0E0;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin card-shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+// Courses Grid
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+// Course Card
+.course-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    @include card-shadow;
+
+    .course-image {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .course-content {
+        padding: 1.5rem;
+
+        h3 {
+            font-size: 1.1rem;
+            color: $text-primary;
+            margin-bottom: 1rem;
+        }
+
+        .course-info {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+
+            .info-item {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                color: $text-secondary;
+                font-size: 0.9rem;
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+        .course-progress {
+            margin-bottom: 1rem;
+
+            .progress-bar {
+                width: 100%;
+                height: 4px;
+                background: $secondary-color;
+                border-radius: 2px;
+                overflow: hidden;
+
+                .progress {
+                    height: 100%;
+                    background: $primary-color;
+                    border-radius: 2px;
+                }
+            }
+        }
+
+        .course-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .start-course {
+                background: $primary-color;
+                color: white;
+                border: none;
+                padding: 0.75rem 1.5rem;
+                border-radius: 25px;
+                cursor: pointer;
+                font-weight: 500;
+                transition: background 0.3s ease;
+
+                &:hover {
+                    background: darken($primary-color, 10%);
+                }
+            }
+
+            .course-rating {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                color: $text-secondary;
+
+                .star {
+                    color: #FFD700;
+                }
+            }
+        }
+    }
+}
+
+// Page Title
+.page-title {
+    font-size: 1.5rem;
+    color: $text-primary;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+// Responsive Design
+@media (max-width: 1200px) {
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .course-card {
+        .course-content {
+            .course-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    }
+}

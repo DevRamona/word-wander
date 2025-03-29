@@ -1,0 +1,148 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordWander - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <img src="images/profile-pic.jpg" alt="Maya atay" class="avatar">
+                <div class="user-info">
+                    <h3>Maya atay</h3>
+                    <p><img src="images/location.svg" alt="Location">United Arab Emirates</p>
+                </div>
+            </div>
+
+            <nav class="menu">
+                <h4>Menu</h4>
+                <ul>
+                    <li class="active">
+                        <a href="#"><img src="images/profile.svg" alt="">My Profile</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/courses.svg" alt="">My Courses</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/settings.svg" alt="">Setting</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <nav>
+                    <a href="#" class="logo">
+                        <img src="images/logo.jpg" alt="WordWander">
+                    </a>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">About us</a></li>
+                    </ul>
+                    <div class="nav-right">
+                        <div class="language-selector">
+                            <span>EN</span>
+                            <img src="images/arrow_forward_ios.svg" alt="">
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Welcome Card -->
+            <div class="welcome-card">
+                <div class="welcome-text">
+                    <h2>Hi Maya, Good Afternoon !</h2>
+                    <p>You've learned 70% of your goal this week!<br>Keep it up and improve your progress.</p>
+                </div>
+                <img src="images/welcome.svg" alt="Welcome">
+            </div>
+
+            <!-- Progress Section -->
+            <div class="dashboard-grid">
+                <!-- Progress Circle -->
+                <div class="progress-card">
+                    <div class="progress-circle">
+                        <svg viewBox="0 0 36 36">
+                            <path d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                                fill="none"
+                                stroke="#E6E6E6"
+                                stroke-width="3"/>
+                            <path d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                                fill="none"
+                                stroke="#8A2BE2"
+                                stroke-width="3"
+                                stroke-dasharray="32, 100"/>
+                        </svg>
+                        <div class="percentage">32%</div>
+                    </div>
+                    <div class="language-info">
+                        <p>Fluent in <img src="images/uk-flag.svg" alt="English"> English</p>
+                        <div class="stats">
+                            <p>Word learned : <span>210</span></p>
+                            <p>Box : <span>4</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar -->
+                <div class="calendar-card">
+                    <div class="calendar-header">
+                        <h3>My Progress</h3>
+                        <div class="month-selector">
+                            <span>JULY 2021</span>
+                            <img src="images/arrow-down.svg" alt="">
+                        </div>
+                    </div>
+                    <!-- Calendar grid implementation -->
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <p>Count of forward : <span>257</span></p>
+                </div>
+                <div class="stat-card">
+                    <p>active days : <span>5</span></p>
+                </div>
+                <div class="stat-card">
+                    <p>Points : <span>120</span></p>
+                </div>
+                <div class="stat-card">
+                    <p>Language : <span>2</span></p>
+                </div>
+            </div>
+
+            <!-- Daily Streak -->
+            <div class="streak-card">
+                <h3>Daily streak :</h3>
+                <div class="streak-days">
+                    <div class="day active">Mon</div>
+                    <div class="day active">Tue</div>
+                    <div class="day">Wed</div>
+                    <div class="day active">Thu</div>
+                    <div class="day">Fri</div>
+                    <div class="day">Sat</div>
+                    <div class="day">Sun</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/login.js"></script>   
+</body>
+</html>

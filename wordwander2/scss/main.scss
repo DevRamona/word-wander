@@ -10,6 +10,8 @@
 @use 'components/language-cards' as *;
 @use 'components/interactive' ;
 @use 'components/login' ;	
+@use 'components/dashboard' ;	
+@use 'components/lesson' ;	
 // Variables
 :root {
     // Light theme (default)

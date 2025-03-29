@@ -1,0 +1,459 @@
+// _dashboard.scss
+
+// Variables
+$primary-color: #8A2BE2;
+$secondary-color: #F8F7FE;
+$text-primary: #333333;
+$text-secondary: #666666;
+$success-color: #28A745;
+$border-color: #E0E0E0;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+// Dashboard Layout
+.dashboard {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+    background: $secondary-color;
+}
+
+// Sidebar
+.sidebar {
+    background: white;
+    padding: 2rem;
+    border-right: 1px solid $border-color;
+
+    .user-profile {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .user-info {
+            h3 {
+                font-size: 1.1rem;
+                color: $text-primary;
+                margin-bottom: 0.25rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+                color: $text-secondary;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+
+    .menu {
+        h4 {
+            color: $text-secondary;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                margin-bottom: 0.5rem;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    padding: 0.75rem 1rem;
+                    color: $text-primary;
+                    text-decoration: none;
+                    border-radius: 10px;
+                    transition: all 0.3s ease;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    &:hover {
+                        background: rgba($primary-color, 0.1);
+                    }
+                }
+
+                &.active a {
+                    background: rgba($primary-color, 0.1);
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+// Main Content
+.main-content {
+    padding: 2rem;
+
+    .welcome-card {
+        @include card;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        background: $primary-color;
+        color: white;
+        margin-bottom: 2rem;
+
+        .welcome-text {
+            h2 {
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                opacity: 0.9;
+                line-height: 1.5;
+            }
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+        }
+    }
+}
+
+// Progress Circle
+.progress-card {
+    @include card;
+    padding: 2rem;
+
+    .progress-circle {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+
+        svg {
+            transform: rotate(-90deg);
+        }
+
+        .percentage {
+            @include flex-center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 2rem;
+            font-weight: 600;
+            color: $primary-color;
+        }
+    }
+}
+
+// Stats Grid
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+
+    .stat-card {
+        @include card;
+        padding: 1.5rem;
+        background: rgba($primary-color, 0.1);
+
+        p {
+            color: $text-primary;
+            font-size: 0.9rem;
+
+            span {
+                color: $primary-color;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+// Streak Card
+.streak-card {
+    @include card;
+    padding: 1.5rem;
+    margin-top: 2rem;
+
+    h3 {
+        color: $text-primary;
+        margin-bottom: 1rem;
+    }
+
+    .streak-days {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+
+        .day {
+            @include flex-center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #F5F5F5;
+            color: $text-secondary;
+
+            &.active {
+                background: $primary-color;
+                color: white;
+            }
+        }
+    }
+}
+
+// Calendar Card
+.calendar-card {
+    @include card;
+    padding: 1.5rem;
+
+    .calendar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        h3 {
+            color: $text-primary;
+        }
+
+        .month-selector {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: $text-secondary;
+            cursor: pointer;
+
+            img {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+}
+
+// Additional styles to update _dashboard.scss
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.progress-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    height: fit-content;
+
+    .language-info {
+        margin-top: 2rem;
+        text-align: center;
+
+        p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            color: $text-primary;
+            font-weight: 500;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+
+            p {
+                color: $text-secondary;
+                
+                span {
+                    color: $primary-color;
+                    font-weight: 600;
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+.calendar-card {
+    .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 0.5rem;
+        margin-top: 1rem;
+
+        .day-header {
+            text-align: center;
+            color: $text-secondary;
+            font-size: 0.9rem;
+            padding: 0.5rem;
+        }
+
+        .day {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            color: $text-secondary;
+            cursor: pointer;
+
+            &.today {
+                background: $primary-color;
+                color: white;
+            }
+
+            &.has-activity {
+                background: rgba($primary-color, 0.1);
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.stats-grid {
+    .stat-card {
+        background: rgba($primary-color, 0.1);
+        border-radius: 15px;
+        padding: 1rem 1.5rem;
+
+        p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: $text-secondary;
+            font-size: 1rem;
+
+            span {
+                color: $primary-color;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.streak-card {
+    background: rgba($primary-color, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+
+    h3 {
+        color: $text-secondary;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    .streak-days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 1rem;
+
+        .day {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            background: white;
+            color: $text-secondary;
+
+            &.active {
+                background: $primary-color;
+                color: white;
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .welcome-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+/* Add to your SCSS */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(138, 43, 226, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    
+    .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #8A2BE2;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
