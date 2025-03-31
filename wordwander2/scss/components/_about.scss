@@ -1,0 +1,160 @@
+@use '../variables' as vars;
+
+.about-hero {
+    background: vars.$primary-color;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: -10%;
+        top: -20%;
+        width: 40%;
+        height: 140%;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transform: rotate(-20deg);
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    h1 {
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.1rem;
+        line-height: 1.6;
+        max-width: 800px;
+    }
+}
+
+.mission {
+    padding: 4rem 0;
+    background: white;
+
+    .mission-text {
+        font-size: 1.25rem;
+        color: vars.$text-dark;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+}
+
+.features {
+    padding: 4rem 0;
+    background: vars.$light-bg;
+
+    .feature {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        margin-bottom: 6rem;
+
+        &.reverse {
+            direction: rtl;
+            
+            .feature-content {
+                direction: ltr;
+            }
+        }
+
+        h2 {
+            color: vars.$text-dark;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .purple-text {
+            color: vars.$primary-purple;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: vars.$text-secondary;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .feature-image {
+            img {
+                width: 100%;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+
+    .language-flags {
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+
+        .flag {
+            text-align: center;
+
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 10px;
+                margin-bottom: 0.5rem;
+            }
+
+            span {
+                color: vars.$text-dark;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+// Responsive styles
+@media (max-width: 992px) {
+    .features {
+        .feature {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+
+            &.reverse {
+                direction: ltr;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 3rem 0;
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    .mission {
+        padding: 3rem 0;
+
+        .mission-text {
+            font-size: 1.1rem;
+        }
+    }
+
+    .language-flags {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

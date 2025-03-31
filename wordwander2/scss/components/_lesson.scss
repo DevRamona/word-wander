@@ -1,6 +1,5 @@
-// _courses.scss
+@use "sass:color";
 
-// Variables
 $primary-color: #8A2BE2;
 $secondary-color: #F8F7FE;
 $text-primary: #333333;
@@ -107,7 +106,7 @@ $border-color: #E0E0E0;
                 transition: background 0.3s ease;
 
                 &:hover {
-                    background: darken($primary-color, 10%);
+                    background:color.adjust($primary-color, $lightness: -10%);
                 }
             }
 
@@ -258,7 +257,7 @@ $border-color: #E0E0E0;
                 transition: background 0.3s ease;
 
                 &:hover {
-                    background: darken($primary-color, 10%);
+                    background: color.adjust($primary-color, $lightness: -5%);
                 }
             }
 
