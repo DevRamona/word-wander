@@ -1874,6 +1874,147 @@ body {
     width: 100%;
   }
 }
+.level-test {
+  min-height: calc(100vh - 80px - 300px);
+  background: white;
+}
+.level-test .test-header {
+  background: #8A2BE2;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+.level-test .test-header h1 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.level-test .test-header .progress-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.level-test .test-header .progress-container .progress-info {
+  color: white;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.level-test .test-header .progress-container .progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.level-test .test-header .progress-container .progress-bar .progress {
+  height: 100%;
+  background: white;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+.level-test .test-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.level-test .test-content h2 {
+  color: #333333;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.level-test .test-content .question-container .question {
+  font-size: 1.2rem;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+.level-test .test-content .question-container .options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.level-test .test-content .question-container .options-grid .option-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.level-test .test-content .question-container .options-grid .option-btn:hover {
+  border-color: #8A2BE2;
+  background: #F8F7FE;
+}
+.level-test .test-content .question-container .options-grid .option-btn .option-letter {
+  width: 30px;
+  height: 30px;
+  background: #8A2BE2;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+.level-test .test-content .question-container .options-grid .option-btn .option-text {
+  color: #333333;
+  font-size: 1rem;
+}
+.level-test .test-content .question-container .navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.level-test .test-content .question-container .navigation-buttons .nav-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.level-test .test-content .question-container .navigation-buttons .nav-btn.prev {
+  background: transparent;
+  border: 1px solid #8A2BE2;
+  color: #8A2BE2;
+}
+.level-test .test-content .question-container .navigation-buttons .nav-btn.prev:hover {
+  background: #F8F7FE;
+}
+.level-test .test-content .question-container .navigation-buttons .nav-btn.next {
+  background: #8A2BE2;
+  color: white;
+}
+.level-test .test-content .question-container .navigation-buttons .nav-btn.next:hover {
+  background: rgb(125.2863070539, 29.3008298755, 214.1991701245);
+}
+.level-test .test-content .feedback-message {
+  margin-top: 2rem;
+}
+.level-test .test-content .feedback-message h3 {
+  color: #8A2BE2;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .level-test .test-content {
+    padding: 1rem;
+  }
+  .level-test .test-content .options-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .level-test .test-content .navigation-buttons {
+    flex-direction: column;
+  }
+  .level-test .test-content .navigation-buttons .nav-btn {
+    width: 100%;
+  }
+}
 :root {
   --primary-color: #8A2BE2;
   --primary-dark: #6B1FA8;

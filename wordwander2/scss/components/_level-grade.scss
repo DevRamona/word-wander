@@ -1,0 +1,178 @@
+// Variables
+$primary-purple: #8A2BE2;
+$light-purple: #F8F7FE;
+$text-dark: #333333;
+$border-color: #E0E0E0;
+
+// Level Test Styles
+.level-test {
+    min-height: calc(100vh - 80px - 300px);
+    background: white;
+
+    .test-header {
+        background: $primary-purple;
+        padding: 1.5rem 0;
+        text-align: center;
+
+        h1 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .progress-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+
+            .progress-info {
+                color: white;
+                text-align: left;
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+            }
+
+            .progress-bar {
+                width: 100%;
+                height: 8px;
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 4px;
+                overflow: hidden;
+
+                .progress {
+                    height: 100%;
+                    background: white;
+                    border-radius: 4px;
+                    transition: width 0.3s ease;
+                }
+            }
+        }
+    }
+
+    .test-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+
+        h2 {
+            color: $text-dark;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .question-container {
+            .question {
+                font-size: 1.2rem;
+                color: $text-dark;
+                margin-bottom: 2rem;
+            }
+
+            .options-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                margin-bottom: 2rem;
+
+                .option-btn {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    padding: 1rem;
+                    border: 1px solid $border-color;
+                    border-radius: 8px;
+                    background: white;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        border-color: $primary-purple;
+                        background: $light-purple;
+                    }
+
+                    .option-letter {
+                        width: 30px;
+                        height: 30px;
+                        background: $primary-purple;
+                        color: white;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 500;
+                    }
+
+                    .option-text {
+                        color: $text-dark;
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .navigation-buttons {
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+
+                .nav-btn {
+                    padding: 0.75rem 1.5rem;
+                    border: none;
+                    border-radius: 8px;
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+
+                    &.prev {
+                        background: transparent;
+                        border: 1px solid $primary-purple;
+                        color: $primary-purple;
+
+                        &:hover {
+                            background: $light-purple;
+                        }
+                    }
+
+                    &.next {
+                        background: $primary-purple;
+                        color: white;
+
+                        &:hover {
+                            background: darken($primary-purple, 5%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .feedback-message {
+            margin-top: 2rem;
+            
+            h3 {
+                color: $primary-purple;
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+    .level-test {
+        .test-content {
+            padding: 1rem;
+
+            .options-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .navigation-buttons {
+                flex-direction: column;
+
+                .nav-btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
