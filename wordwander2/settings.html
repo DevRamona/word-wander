@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordWander - Account Settings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="user-profile">
+                <img src="images/profile-pic.jpg" alt="Maya atay" class="avatar">
+                <div class="user-info">
+                    <h3>Maya atay</h3>
+                    <p><img src="images/location.svg" alt="Location">United Arab Emirates</p>
+                </div>
+            </div>
+
+            <nav class="menu">
+                <h4>Menu</h4>
+                <ul>
+                    <li>
+                        <a href="profile.html">
+                            <img src="images/profile-icon.svg" alt="">
+                            Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a href="my-courses.html">
+                            <img src="images/courses-icon.svg" alt="">
+                            My Courses
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="settings.html">
+                            <img src="images/settings-icon.svg" alt="">
+                            Setting
+                        </a>
+                    </li>
+                    <li class="logout">
+                        <a href="#">
+                            <img src="images/logout-icon.svg" alt="">
+                            Log out
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <nav class="nav">
+                    <div class="nav__logo">
+                        <img src="images/logo.svg" alt="WordWander">
+                    </div>
+                    <div class="nav__menu">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                            <li><a href="about.html">About us</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__actions">
+                        <div class="language-selector">
+                            <span>EN</span>
+                            <img src="images/arrow-down.svg" alt="Select language">
+                        </div>
+                        <a href="#" class="user-profile">
+                            <img src="images/profile-icon.svg" alt="Profile">
+                        </a>
+                    </div>
+                </nav>
+            </header>
+
+            <section class="settings-section">
+                <h1>Account Information</h1>
+                
+                <form class="settings-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" value="Maya Atay" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" value="mayaatay4400@gmail.com" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone number</label>
+                        <input type="tel" id="phone" value="536698300" readonly>
+                    </div>
+
+                    <div class="password-section">
+                        <h2>Change password</h2>
+                        
+                        <div class="form-group">
+                            <label for="current-password">Current password</label>
+                            <div class="password-input">
+                                <input type="password" id="current-password">
+                                <button type="button" class="toggle-password">
+                                    <img src="images/eye-icon.svg" alt="Show password">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="new-password">New password</label>
+                            <div class="password-input">
+                                <input type="password" id="new-password">
+                                <button type="button" class="toggle-password">
+                                    <img src="images/eye-icon.svg" alt="Show password">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirm-password">Re-enter new password</label>
+                            <div class="password-input">
+                                <input type="password" id="confirm-password">
+                                <button type="button" class="toggle-password">
+                                    <img src="images/eye-icon.svg" alt="Show password">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="language">Interface language</label>
+                        <select id="language">
+                            <option value="en">English(UK)</option>
+                            <option value="fr">French</option>
+                            <option value="rw">Kinyarwanda</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="save-button">Save</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

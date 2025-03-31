@@ -1,0 +1,6 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="90" fill="#F8F7FE"/>
+    <path d="M100 30C61.34 30 30 61.34 30 100C30 138.66 61.34 170 100 170C138.66 170 170 138.66 170 100C170 61.34 138.66 30 100 30ZM85 130L55 100L63.5 91.5L85 113L136.5 61.5L145 70L85 130Z" fill="#8A2BE2"/>
+    <circle cx="150" cy="50" r="20" fill="#FFA500"/>
+    <text x="140" y="58" font-family="Arial" font-size="20" fill="white">A+</text>
+</svg>
