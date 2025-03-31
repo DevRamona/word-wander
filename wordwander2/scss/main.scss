@@ -12,7 +12,10 @@
 @use 'components/login' ;	
 @use 'components/dashboard' ;	
 @use 'components/lesson' ;
-@use 'components/about' ;	
+@use 'components/about' ;
+@use 'components/level-test' ;	
+
+
 // Variables
 :root {
     // Light theme (default)

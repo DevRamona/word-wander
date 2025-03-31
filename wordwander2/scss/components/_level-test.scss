@@ -1,0 +1,122 @@
+// Level Test Styles
+// Colors
+$primary-purple: #8A2BE2;
+$text-dark: #333333;
+$orange: #FFA500;
+
+// Other variables
+$header-height: 80px;
+$footer-height: 300px;
+.level-test {
+    min-height: calc(100vh - 80px - 300px); // Adjust based on header and footer height
+    padding: 0 0 4rem;
+
+    .test-header {
+        background: $primary-purple;
+        padding: 1.5rem 0;
+        margin-bottom: 4rem;
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .progress-bar {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+
+            .progress-text {
+                color: white;
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+            }
+
+            .progress {
+                height: 8px;
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 4px;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%; // Full progress
+                    background: white;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+
+    .test-result {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0 2rem;
+
+        .level-badge {
+            width: 100px;
+            height: 100px;
+            background: #FFA500;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 0 auto 2rem;
+        }
+
+        .result-text {
+            color: $text-dark;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+
+            .highlight {
+                color: #FFA500;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .score-section {
+            h2 {
+                color: $text-dark;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .score {
+                color: $text-dark;
+                font-size: 2rem;
+                font-weight: 600;
+                margin-bottom: 2rem;
+            }
+
+            .trophy {
+                img {
+                    width: 150px;
+                    height: auto;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
+
+.trophy-svg {
+    width: 150px;
+    height: 150px;
+    fill: #D3D3D3;
+}
