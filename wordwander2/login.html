@@ -112,14 +112,12 @@
     </main>
 
     <script>
-        // Add this before your other scripts
         document.addEventListener('DOMContentLoaded', function() {
             const images = document.querySelectorAll('img');
             images.forEach(img => {
                 const originalSrc = img.getAttribute('src');
                 img.onerror = function() {
                     console.error('Failed to load:', originalSrc);
-                    // Try without the dot
                     if(originalSrc.startsWith('./')) {
                         img.src = originalSrc.substring(2);
                     }
