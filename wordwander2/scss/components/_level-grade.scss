@@ -1,4 +1,4 @@
-// Variables
+@use "sass:color";
 $primary-purple: #8A2BE2;
 $light-purple: #F8F7FE;
 $text-dark: #333333;
@@ -137,7 +137,7 @@ $border-color: #E0E0E0;
                         color: white;
 
                         &:hover {
-                            background: darken($primary-purple, 5%);
+                            background: color.adjust($primary-purple, $lightness: -5%);
                         }
                     }
                 }

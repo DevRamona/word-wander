@@ -3,18 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordWander - Account Settings</title>
+    <title>WordWander - Settings</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__logo">
+                    <svg width="180" height="40" viewBox="0 0 180 40">
+                        <path d="M20 5C11.7157 5 5 11.7157 5 20C5 28.2843 11.7157 35 20 35C28.2843 35 35 28.2843 35 20C35 11.7157 28.2843 5 20 5Z" fill="#8A2BE2"/>
+                        <text x="45" y="25" fill="#8A2BE2" font-family="Poppins" font-size="20" font-weight="600">WordWander</text>
+                    </svg>
+                </div>
+                <div class="nav__menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="about.html">About us</a></li>
+                    </ul>
+                </div>
+                <div class="nav__actions">
+                    <div class="language-selector">
+                        <span>EN</span>
+                        <svg width="10" height="6" viewBox="0 0 10 6">
+                            <path d="M1 1L5 5L9 1" stroke="#333" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <a href="#" class="user-profile">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="11.5" stroke="#333"/>
+                            <circle cx="12" cy="8" r="4" fill="#333"/>
+                            <path d="M4 19C4 15 7.5 13 12 13C16.5 13 20 15 20 19" fill="#333"/>
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
     <div class="dashboard-layout">
+        <!-- Sidebar -->
         <aside class="sidebar">
             <div class="user-profile">
-                <img src="images/profile-pic.jpg" alt="Maya atay" class="avatar">
+                <div class="profile-image">
+                    <img src="path/to/profile-image.jpg" alt="Maya atay">
+                    <span class="status-badge"></span>
+                </div>
                 <div class="user-info">
                     <h3>Maya atay</h3>
-                    <p><img src="images/location.svg" alt="Location">United Arab Emirates</p>
+                    <p class="location">
+                        <svg width="16" height="16" viewBox="0 0 16 16">
+                            <path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5C8 14.5 12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5Z" fill="#666"/>
+                        </svg>
+                        United Arab Emirates
+                    </p>
                 </div>
             </div>
 
@@ -23,25 +69,35 @@
                 <ul>
                     <li>
                         <a href="profile.html">
-                            <img src="images/profile-icon.svg" alt="">
+                            <svg width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M10 10C12.2091 10 14 8.20914 14 6C14 3.79086 12.2091 2 10 2C7.79086 2 6 3.79086 6 6C6 8.20914 7.79086 10 10 10Z" fill="#666"/>
+                                <path d="M3 18C3 14.6863 6.13401 12 10 12C13.866 12 17 14.6863 17 18" stroke="#666"/>
+                            </svg>
                             Profile
                         </a>
                     </li>
                     <li>
                         <a href="my-courses.html">
-                            <img src="images/courses-icon.svg" alt="">
+                            <svg width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M16 2H4C2.9 2 2 2.9 2 4V16C2 17.1 2.9 18 4 18H16C17.1 18 18 17.1 18 16V4C18 2.9 17.1 2 16 2ZM8 14H5V12H8V14ZM8 11H5V9H8V11ZM8 8H5V6H8V8ZM15 14H9V12H15V14ZM15 11H9V9H15V11ZM15 8H9V6H15V8Z" fill="#666"/>
+                            </svg>
                             My Courses
                         </a>
                     </li>
                     <li class="active">
                         <a href="settings.html">
-                            <img src="images/settings-icon.svg" alt="">
+                            <svg width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M17.1 10.9C17.2 10.6 17.2 10.3 17.2 10C17.2 9.7 17.2 9.4 17.1 9.1L19.2 7.4C19.4 7.2 19.4 7 19.3 6.8L17.3 3.2C17.2 3 16.9 2.9 16.7 3L14.2 4.1C13.7 3.7 13.2 3.4 12.6 3.2L12.2 0.6C12.2 0.4 12 0.2 11.8 0.2H7.8C7.6 0.2 7.4 0.4 7.4 0.6L7 3.2C6.4 3.4 5.9 3.7 5.4 4.1L2.9 3C2.7 2.9 2.4 3 2.3 3.2L0.300001 6.8C0.200001 7 0.200001 7.2 0.400001 7.4L2.5 9.1C2.4 9.4 2.4 9.7 2.4 10C2.4 10.3 2.4 10.6 2.5 10.9L0.400001 12.6C0.200001 12.8 0.200001 13 0.300001 13.2L2.3 16.8C2.4 17 2.7 17.1 2.9 17L5.4 15.9C5.9 16.3 6.4 16.6 7 16.8L7.4 19.4C7.4 19.6 7.6 19.8 7.8 19.8H11.8C12 19.8 12.2 19.6 12.2 19.4L12.6 16.8C13.2 16.6 13.7 16.3 14.2 15.9L16.7 17C16.9 17.1 17.2 17 17.3 16.8L19.3 13.2C19.4 13 19.4 12.8 19.2 12.6L17.1 10.9ZM9.8 13.5C7.9 13.5 6.3 11.9 6.3 10C6.3 8.1 7.9 6.5 9.8 6.5C11.7 6.5 13.3 8.1 13.3 10C13.3 11.9 11.7 13.5 9.8 13.5Z" fill="#8A2BE2"/>
+                            </svg>
                             Setting
                         </a>
                     </li>
                     <li class="logout">
                         <a href="#">
-                            <img src="images/logout-icon.svg" alt="">
+                            <svg width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M15.3 4.7C13.9 3.3 12 2.4 10 2.4C6.1 2.4 2.9 5.6 2.9 9.5C2.9 13.4 6.1 16.6 10 16.6C12 16.6 13.9 15.7 15.3 14.3" stroke="#FF0000" stroke-width="1.5"/>
+                                <path d="M13.5 9.5H19.5M19.5 9.5L17 7M19.5 9.5L17 12" stroke="#FF0000" stroke-width="1.5"/>
+                            </svg>
                             Log out
                         </a>
                     </li>
@@ -49,91 +105,73 @@
             </nav>
         </aside>
 
+        <!-- Main Content -->
         <main class="main-content">
-            <header class="header">
-                <nav class="nav">
-                    <div class="nav__logo">
-                        <img src="images/logo.svg" alt="WordWander">
-                    </div>
-                    <div class="nav__menu">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="courses.html">Courses</a></li>
-                            <li><a href="contact.html">Contact us</a></li>
-                            <li><a href="about.html">About us</a></li>
-                        </ul>
-                    </div>
-                    <div class="nav__actions">
-                        <div class="language-selector">
-                            <span>EN</span>
-                            <img src="images/arrow_forward_ios.svg" alt="Select language">
-                        </div>
-                        <a href="#" class="user-profile">
-                            <img src="images/profile.svg" alt="Profile">
-                        </a>
-                    </div>
-                </nav>
-            </header>
-
             <section class="settings-section">
                 <h1>Account Information</h1>
                 
                 <form class="settings-form">
                     <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" value="Maya Atay" readonly>
+                        <label>Username</label>
+                        <input type="text" value="Maya Atay" readonly>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" value="mayaatay4400@gmail.com" readonly>
+                        <label>Email</label>
+                        <input type="email" value="mayaatay4400@gmail.com" readonly>
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Phone number</label>
-                        <input type="tel" id="phone" value="536698300" readonly>
+                        <label>Phone number</label>
+                        <input type="tel" value="536698300" readonly>
                     </div>
 
                     <div class="password-section">
                         <h2>Change password</h2>
                         
                         <div class="form-group">
-                            <label for="current-password">Current password</label>
+                            <label>Current password</label>
                             <div class="password-input">
-                                <input type="password" id="current-password">
+                                <input type="password">
                                 <button type="button" class="toggle-password">
-                                    <img src="images/eye-icon.svg" alt="Show password">
+                                    <svg width="20" height="20" viewBox="0 0 20 20">
+                                        <path d="M10 4C14 4 17.3 6.1 19.5 10C17.3 13.9 14 16 10 16C6 16 2.7 13.9 0.5 10C2.7 6.1 6 4 10 4ZM10 14C12.2 14 14 12.2 14 10C14 7.8 12.2 6 10 6C7.8 6 6 7.8 6 10C6 12.2 7.8 14 10 14ZM10 8C11.1 8 12 8.9 12 10C12 11.1 11.1 12 10 12C8.9 12 8 11.1 8 10C8 8.9 8.9 8 10 8Z" fill="#666"/>
+                                    </svg>
                                 </button>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="new-password">New password</label>
+                            <label>New password</label>
                             <div class="password-input">
-                                <input type="password" id="new-password">
+                                <input type="password">
                                 <button type="button" class="toggle-password">
-                                    <img src="images/eye-icon.svg" alt="Show password">
+                                    <svg width="20" height="20" viewBox="0 0 20 20">
+                                        <path d="M10 4C14 4 17.3 6.1 19.5 10C17.3 13.9 14 16 10 16C6 16 2.7 13.9 0.5 10C2.7 6.1 6 4 10 4ZM10 14C12.2 14 14 12.2 14 10C14 7.8 12.2 6 10 6C7.8 6 6 7.8 6 10C6 12.2 7.8 14 10 14ZM10 8C11.1 8 12 8.9 12 10C12 11.1 11.1 12 10 12C8.9 12 8 11.1 8 10C8 8.9 8.9 8 10 8Z" fill="#666"/>
+                                    </svg>
                                 </button>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="confirm-password">Re-enter new password</label>
+                            <label>Re-enter new password</label>
                             <div class="password-input">
-                                <input type="password" id="confirm-password">
+                                <input type="password">
                                 <button type="button" class="toggle-password">
-                                    <img src="images/eye-icon.svg" alt="Show password">
+                                    <svg width="20" height="20" viewBox="0 0 20 20">
+                                        <path d="M10 4C14 4 17.3 6.1 19.5 10C17.3 13.9 14 16 10 16C6 16 2.7 13.9 0.5 10C2.7 6.1 6 4 10 4ZM10 14C12.2 14 14 12.2 14 10C14 7.8 12.2 6 10 6C7.8 6 6 7.8 6 10C6 12.2 7.8 14 10 14ZM10 8C11.1 8 12 8.9 12 10C12 11.1 11.1 12 10 12C8.9 12 8 11.1 8 10C8 8.9 8.9 8 10 8Z" fill="#666"/>
+                                    </svg>
                                 </button>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="language">Interface language</label>
-                        <select id="language">
-                            <option value="en">English(UK)</option>
-                            <option value="fr">French</option>
-                            <option value="rw">Kinyarwanda</option>
+                        <label>Interface language</label>
+                        <select>
+                            <option selected>English(UK)</option>
+                            <option>French</option>
+                            <option>Kinyarwanda</option>
                         </select>
                     </div>
 

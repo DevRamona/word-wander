@@ -28,14 +28,6 @@ body {
   max-width: 100%;
   height: auto;
   
-  &:not([loaded]) {
-      opacity: 0;
-      transition: opacity 0.3s ease;
-  }
-  
-  &[loaded] {
-      opacity: 1;
-  }
   &[src*="logo"] {
       max-height: 40px;
   }

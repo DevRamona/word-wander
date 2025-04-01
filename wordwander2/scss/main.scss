@@ -16,11 +16,13 @@
 @use 'components/level-test' ;	
 @use 'components/lesson-complete' ;	
 @use 'components/level-grade' ;	
+@use 'components/contact' ;	
+@use 'components/settings' ;	
 
 
-// Variables
+
 :root {
-    // Light theme (default)
+  
     --primary-color: #8A2BE2;
     --primary-dark: #6B1FA8;
     --background: #FFFFFF;
