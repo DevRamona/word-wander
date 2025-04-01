@@ -251,13 +251,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgba(255, 0, 0, 0.2);
 }
 .hero__image img {
   max-width: 100%;
   width: 100px;
   height: 100px;
-  border: 1px solid rgba(0, 128, 0, 0.2);
 }
 .hero .btn--start {
   padding: 0.8rem 2rem;
