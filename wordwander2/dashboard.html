@@ -3,145 +3,359 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordWander - Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="dashboard">
-        <!-- Sidebar -->
-        <aside class="sidebar">
+    <main class="profile-dashboard">
+        <div class="main-content">
+          <aside class="sidebar">
             <div class="user-profile">
-                <img src="images/profile-pic.jpg" alt="Maya atay" class="avatar">
-                <div class="user-info">
-                    <h3>Maya atay</h3>
-                    <p><img src="images/location.svg" alt="Location">United Arab Emirates</p>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/9ad3f21476ebbf8f01495727e07f1e12687a6bd1baee4a0a3054f186d3a4ae10?placeholderIfAbsent=true"
+                class="user-avatar"
+                alt="Maya atay profile picture"
+              />
+              <div class="user-info">
+                <h2 class="user-name">Maya atay</h2>
+                <div class="user-location">
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/2003c8eb46a3da08996bbb79839fc2772b2cff9bc44a87304ca5050e20f222b1?placeholderIfAbsent=true"
+                    class="location-icon"
+                    alt="Location icon"
+                  />
+                  <span class="location-text">United Arab Emirates</span>
                 </div>
+              </div>
             </div>
-
-            <nav class="menu">
-                <h4>Menu</h4>
-                <ul>
-                    <li class="active">
-                        <a href="#"><img src="images/profile.svg" alt="">My Profile</a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/courses.svg" alt="">My Courses</a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/settings.svg" alt="">Setting</a>
-                    </li>
-                </ul>
+      
+            <h3 class="menu-title">Menu</h3>
+            <nav class="sidebar-nav">
+              <ul class="menu-list">
+                <li class="menu-item active">
+                    <img
+                        loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/9da3ad76b20ac974011f88b54ca2e140b9a8514e9dc3c781c2c3827324104a4f?placeholderIfAbsent=true"
+                        class="menu-icon"
+                        alt="Profile icon"/>
+            
+                  <span class="menu-text">My Profile</span>
+                </li>
+                <li class="menu-item">
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/0b13fcc828db357c3562ba9f5335c422e1267743e7a2f3cc264b1faa13c07827?placeholderIfAbsent=true"
+                    class="menu-icon"
+                    alt="Courses icon"
+                  />
+                  <span class="menu-text">My Courses</span>
+                </li>
+                <li class="menu-item">
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/9da3ad76b20ac974011f88b54ca2e140b9a8514e9dc3c781c2c3827324104a4f?placeholderIfAbsent=true"
+                    class="menu-icon"
+                    alt="Settings icon"
+                  />
+                  <span class="menu-text">Setting</span>
+                </li>
+              </ul>
             </nav>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Header -->
-            <header class="header">
-                <nav>
-                    <a href="#" class="logo">
-                        <img src="images/logo.jpg" alt="WordWander">
-                    </a>
-                    <ul class="nav-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Courses</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">About us</a></li>
-                    </ul>
-                    <div class="nav-right">
-                        <div class="language-selector">
-                            <span>EN</span>
-                            <img src="images/arrow_forward_ios.svg" alt="">
-                        </div>
-                    </div>
-                </nav>
-            </header>
-
-            <!-- Welcome Card -->
-            <div class="welcome-card">
-                <div class="welcome-text">
-                    <h2>Hi Maya, Good Afternoon !</h2>
-                    <p>You've learned 70% of your goal this week!<br>Keep it up and improve your progress.</p>
-                </div>
-                <img src="images/welcome.svg" alt="Welcome">
+          </aside>
+      
+          <section class="content-area">
+            <div class="welcome-banner">
+              <div class="welcome-text">
+                <h2 class="greeting">Hi Maya, Good Afternoon!</h2>
+                <p class="progress-message">
+                  You've learned 70% of your goal this week!<br />
+                  Keep it up and improve your progress.
+                </p>
+              </div>
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/e1eef29c9f5558a7c8c5804f87e9a5f46ed9f42f29dde093da8cdb02a6f374d2?placeholderIfAbsent=true"
+                class="welcome-image"
+                alt="Progress illustration"
+              />
             </div>
-
-            <!-- Progress Section -->
-            <div class="dashboard-grid">
-                <!-- Progress Circle -->
-                <div class="progress-card">
-                    <div class="progress-circle">
-                        <svg viewBox="0 0 36 36">
-                            <path d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                                fill="none"
-                                stroke="#E6E6E6"
-                                stroke-width="3"/>
-                            <path d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                                fill="none"
-                                stroke="#8A2BE2"
-                                stroke-width="3"
-                                stroke-dasharray="32, 100"/>
-                        </svg>
-                        <div class="percentage">32%</div>
-                    </div>
-                    <div class="language-info">
-                        <p>Fluent in <img src="images/uk-flag.svg" alt="English"> English</p>
-                        <div class="stats">
-                            <p>Word learned : <span>210</span></p>
-                            <p>Box : <span>4</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Calendar -->
-                <div class="calendar-card">
-                    <div class="calendar-header">
-                        <h3>My Progress</h3>
-                        <div class="month-selector">
-                            <span>JULY 2021</span>
-                            <img src="images/arrow-down.svg" alt="">
-                        </div>
-                    </div>
-                    <!-- Calendar grid implementation -->
-                </div>
-            </div>
-
-            <!-- Stats Section -->
+      
             <div class="stats-grid">
-                <div class="stat-card">
-                    <p>Count of forward : <span>257</span></p>
+              <div class="progress-card">
+                <div class="progress-circle">
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/c450ec5ce0f64b6accefd7218aee68d457d498b723234bc0b5622b0574f1fead?placeholderIfAbsent=true"
+                    class="progress-chart"
+                    alt="Progress chart"
+                  />
+                  <span class="progress-percent">32%</span>
                 </div>
-                <div class="stat-card">
-                    <p>active days : <span>5</span></p>
+                <div class="language-progress">
+                  <h3 class="progress-title">Fluent in</h3>
+                  <div class="language-info">
+                    <span class="flag-icon"></span>
+                    <span class="language-name">English</span>
+                  </div>
                 </div>
-                <div class="stat-card">
-                    <p>Points : <span>120</span></p>
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/d71af36509dbdef6cd75eab46e070dabc5a0a19933009170de6104dd2a713488?placeholderIfAbsent=true"
+                  class="divider"
+                  alt=""
+                />
+                <div class="stats-row">
+                  <p class="stat-item">
+                    Word learned: <span class="stat-value">210</span>
+                  </p>
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/e5a432467a364ea58792894ec906efb7b52bb8c6ccdeae7515cd5718a65f3753?placeholderIfAbsent=true"
+                    class="stat-divider"
+                    alt=""
+                  />
+                  <p class="stat-item">Box: <span class="stat-value">4</span></p>
                 </div>
-                <div class="stat-card">
-                    <p>Language : <span>2</span></p>
+              </div>
+      
+              <div class="calendar-widget">
+                <div class="calendar-header">
+                  <h3 class="calendar-title">My Progress</h3>
+                  <div class="month-selector">
+                    <span class="current-month">JULY 2021</span>
+                    <img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/eeb9176be9f7638158c292839f1c52e55a4fc5bd33f1351bb9414d1877c850df?placeholderIfAbsent=true"
+                      class="month-arrow"
+                      alt="Next month"
+                    />
+                  </div>
                 </div>
+      
+                <div class="calendar-grid">
+                  <div class="weekdays">
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                    <span>Sat</span>
+                    <span>Sun</span>
+                  </div>
+      
+                  <div class="calendar-days">
+                   
+                    <span class="day">1</span>
+                    <span class="day">2</span>
+                    <span class="day">3</span>
+                    <span class="day">4</span>
+                    <span class="day"></span>
+                    <span class="day"></span>
+                    <span class="day"></span>
+      
+                  
+                    <span class="day">5</span>
+                    <span class="day">6</span>
+                    <span class="day">7</span>
+                    <span class="day active">8</span>
+                    <span class="day">9</span>
+                    <span class="day">10</span>
+                    <span class="day">11</span>
+      
+                  
+                    <span class="day">12</span>
+                    <span class="day highlight-red">13</span>
+                    <span class="day">14</span>
+                    <span class="day">15</span>
+                    <span class="day">16</span>
+                    <span class="day">17</span>
+                    <span class="day highlight-green">18</span>
+      
+                  
+                    <span class="day">19</span>
+                    <span class="day">20</span>
+                    <span class="day">21</span>
+                    <span class="day">22</span>
+                    <span class="day highlight-yellow">23</span>
+                    <span class="day">24</span>
+                    <span class="day">25</span>
+      
+                
+                    <span class="day">26</span>
+                    <span class="day">27</span>
+                    <span class="day">28</span>
+                    <span class="day">29</span>
+                    <span class="day">30</span>
+                    <span class="day">31</span>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <!-- Daily Streak -->
-            <div class="streak-card">
-                <h3>Daily streak :</h3>
+      
+            <div class="metrics-grid">
+              <div class="metrics-card">
+                <ul class="metrics-list">
+                  <li class="metric-item">
+                    Count of forward: <span class="metric-value">257</span>
+                  </li>
+                  <li class="metric-item">
+                    Active days: <span class="metric-value">5</span>
+                  </li>
+                  <li class="metric-item">
+                    Points: <span class="metric-value">120</span>
+                  </li>
+                  <li class="metric-item">
+                    Language: <span class="metric-value">2</span>
+                  </li>
+                </ul>
+              </div>
+      
+              <div class="leaderboard-card">
+                <h3 class="leaderboard-title">Top Performing Student</h3>
+                <ul class="student-list">
+                  <li class="student-item">
+                    <div class="student-avatar blue">DS</div>
+                    <div class="student-info">
+                      <span class="student-name">Joshua Ashiru</span>
+                      <span class="student-points">9/10 points</span>
+                    </div>
+                  </li>
+                  <li class="student-item">
+                    <div class="student-avatar pink">TO</div>
+                    <div class="student-info">
+                      <span class="student-name">Joshua Ashiru</span>
+                      <span class="student-points">8.5/10 points</span>
+                    </div>
+                  </li>
+                  <li class="student-item">
+                    <div class="student-avatar yellow">MJ</div>
+                    <div class="student-info">
+                      <span class="student-name">Joshua Ashiru</span>
+                      <span class="student-points">7/10 points</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+      
+            <div class="streak-section">
+              <h3 class="streak-title">Daily streak:</h3>
+              <div class="streak-container">
+                <div class="streak-dots">
+                  <div class="streak-dot active"></div>
+                  <div class="streak-dot active"></div>
+                  <div class="streak-dot"></div>
+                  <div class="streak-dot active"></div>
+                  <div class="streak-dot"></div>
+                  <div class="streak-dot"></div>
+                  <div class="streak-dot"></div>
+                </div>
                 <div class="streak-days">
-                    <div class="day active">Mon</div>
-                    <div class="day active">Tue</div>
-                    <div class="day">Wed</div>
-                    <div class="day active">Thu</div>
-                    <div class="day">Fri</div>
-                    <div class="day">Sat</div>
-                    <div class="day">Sun</div>
+                  <span>Mon</span>
+                  <span>Tue</span>
+                  <span>Wed</span>
+                  <span>Thu</span>
+                  <span>Fri</span>
+                  <span>Sat</span>
+                  <span>Sun</span>
                 </div>
+              </div>
             </div>
-        </main>
-    </div>
-    <script src="js/login.js"></script>   
+          </section>
+        </div>
+      
+        <footer class="main-footer">
+          <div class="footer-content">
+            <div class="footer-grid">
+              <div class="footer-about">
+                <p class="footer-tagline">
+                  Fluency is nothing more than mastering the 100 most important
+                  real-life conversations
+                </p>
+              </div>
+      
+              <div class="footer-courses">
+                <h4 class="footer-title">WordWander courses</h4>
+                <ul class="footer-links">
+                  <li><a href="#">Learn English</a></li>
+                  <li><a href="#">Learn Kinyarwanda</a></li>
+                  <li><a href="#">Learn French</a></li>
+                </ul>
+              </div>
+      
+              <div class="footer-products">
+                <h4 class="footer-title">Products</h4>
+                <ul class="footer-links">
+                  <li><a href="#">Landing page</a></li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Contact us</a></li>
+                </ul>
+              </div>
+      
+              <div class="footer-contact">
+                <h4 class="footer-title">Contact information</h4>
+                <ul class="contact-list">
+                  <li class="contact-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/f79d98b6955433f59e1c7640cbc4cf536372b796f0df9af924e5f6e39917b56a?placeholderIfAbsent=true"
+                      class="contact-icon"
+                      alt="Phone"
+                    />
+                    <span>+34933478486</span>
+                  </li>
+                  <li class="contact-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/12cbbcec974837e8e194d6545f44c9a65c50dcbc5f33fa991582fba3e697cbfa?placeholderIfAbsent=true"
+                      class="contact-icon"
+                      alt="Email"
+                    />
+                    <span>Info@wordwander.co</span>
+                  </li>
+                  <li class="contact-item">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/bf1549a8c0b34cec69ef6721de835de4eae933e9fbeb46cbdd0317ec81113c98?placeholderIfAbsent=true"
+                      class="contact-icon"
+                      alt="Location"
+                    />
+                    <span>Kigali/ Rwanda</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+      
+            <div class="social-links">
+              <a href="#" class="social-link facebook" aria-label="Facebook"></a>
+              <a href="#" class="social-link linkedin" aria-label="LinkedIn"></a>
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/a536dcc3d6d451319ebd63e4fda0e9a5bdd8073d3428ea97e394d1b4e5be1381?placeholderIfAbsent=true"
+                class="social-icon"
+                alt="Social media"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/a3c58a533e2ec3f74850ac5a00ae219d187360cb47754261f419cf43192f82e0?placeholderIfAbsent=true"
+                class="social-icon"
+                alt="Social media"
+              />
+            </div>
+          </div>
+      
+          <div class="footer-bottom">
+            <div class="footer-wrapper">
+              <p class="copyright">2025 WordWander. All Rights Reserved.</p>
+              <div class="legal-links">
+                <a href="#" class="legal-link">Terms & Conditions</a>
+                <a href="#" class="legal-link">Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </main>
+      
 </body>
 </html>

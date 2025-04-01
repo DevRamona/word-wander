@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WordWander - Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
+    
     <header class="header">
         <div class="container">
             <nav class="nav">
                 <div class="nav__logo">
-                    <img src="images/logo.jpg" alt="WordWander">
+                    <a href="index.html">
+                        <img src="./images/logo.jpg" alt="WordWander Logo" class="logo-image">
+                        <h1 class="logo-text">WordWander</h1>
+                    </a>
                 </div>
                 <div class="nav__menu">
                     <ul>
@@ -24,12 +29,15 @@
                 </div>
                 <div class="nav__actions">
                     <div class="language-selector">
-                        <span>EN</span>
-                        <img src="images/arrow_forward_ios.svg" alt="Select language">
+                        <img src="./images/language.svg" alt="Language" class="language-icon">
+                        <div class="language-wrapper">
+                            <span class="language-text">EN</span>
+                            <img src="./images/arrow_forward_ios.svg" alt="Dropdown" class="dropdown-icon">
+                        </div>
                     </div>
-                    <a href="#" class="user-profile">
-                        <img src="images/Vector.png" alt="Profile">
-                    </a>
+                    <button class="nav__toggle">
+                        <img src="./images/menu.svg" alt="Menu">
+                    </button>
                 </div>
             </nav>
         </div>
@@ -37,15 +45,13 @@
 
     <main class="login-section">
         <div class="login-container">
-            <!-- Left side with image -->
             <div class="login-image">
-                <img src="images/Rectangle.png" alt="Login illustration">
+                <img src="./images/Rectangle.jpg" alt="Login illustration">
                 <div class="welcome-text">
                     <h2>Welcome, Looks like you're new here!</h2>
                 </div>
             </div>
 
-            <!-- Right side with form -->
             <div class="login-form-container">
                 <div class="login-form-wrapper">
                     <h1>Log In</h1>
@@ -59,7 +65,7 @@
                             <label for="email">Email or username</label>
                             <div class="input-wrapper">
                                 <input type="email" id="email" name="email" required placeholder="Enter your Email or username">
-                                <img src="images/lock.png" alt="Email icon" class="input-icon">
+                                <img src="./images/mail-icon.svg" alt="Email icon" class="input-icon">
                             </div>
                         </div>
 
@@ -67,7 +73,7 @@
                             <label for="password">Password</label>
                             <div class="input-wrapper">
                                 <input type="password" id="password" name="password" required placeholder="Enter your Password">
-                                <img src="images/lock.png" alt="Password icon" class="input-icon">
+                                <img src="./images/lock.png" alt="Password icon" class="input-icon">
                             </div>
                         </div>
 
@@ -85,13 +91,13 @@
                             <p>Or continue with</p>
                             <div class="social-buttons">
                                 <button type="button" class="social-button">
-                                    <img src="images/Facebook.png" alt="Facebook">
+                                    <img src="./images/Facebook.png" alt="Facebook">
                                 </button>
                                 <button type="button" class="social-button">
-                                    <img src="images/LinkedIn.png" alt="LinkedIn">
+                                    <img src="./images/LinkedIn.png" alt="LinkedIn">
                                 </button>
                                 <button type="button" class="social-button">
-                                    <img src="images/instagram-line.svg" alt="Instagram">
+                                    <img src="./images/instagram-line.svg" alt="Instagram">
                                 </button>
                             </div>
                         </div>
@@ -104,9 +110,26 @@
             </div>
         </div>
     </main>
+
     <script>
-        console.log('Login page loaded');
+        // Add this before your other scripts
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                const originalSrc = img.getAttribute('src');
+                img.onerror = function() {
+                    console.error('Failed to load:', originalSrc);
+                    // Try without the dot
+                    if(originalSrc.startsWith('./')) {
+                        img.src = originalSrc.substring(2);
+                    }
+                };
+                img.onload = function() {
+                    console.log('Successfully loaded:', originalSrc);
+                };
+            });
+        });
     </script>
-    <script src="js/login.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 </html>

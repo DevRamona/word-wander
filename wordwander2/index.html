@@ -3,111 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordWander - Login</title>
+    <title>WordWander - Learn Languages Online</title>
     <link rel="stylesheet" href="css/main.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
+
     <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <div class="nav__logo">
-                    <img src="images/logo.svg" alt="WordWander">
-                </div>
-                <div class="nav__menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li><a href="contact.html">Contact us</a></li>
-                        <li><a href="about.html">About us</a></li>
-                    </ul>
-                </div>
-                <div class="nav__actions">
-                    <div class="language-selector">
-                        <span>EN</span>
-                        <img src="images/arrow-down.svg" alt="Select language">
-                    </div>
-                    <a href="#" class="user-profile">
-                        <img src="images/user.svg" alt="Profile">
-                    </a>
-                </div>
-            </nav>
-        </div>
+        <nav class="nav">
+            <div class="nav__logo">
+                <img
+                            src="images/logo.jpg"
+                            class="logo-image"
+                            alt="WordWander Logo"
+                        />
+            </div>
+            <div class="nav__menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__cta">
+                <button class="btn btn--login">Login</button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
     </header>
 
-    <!-- Login Section -->
-    <main class="login-section">
-        <div class="login-container">
-            <!-- Left Side - Image -->
-            <div class="login-image">
-                <img src="images/login-illustration.jpg" alt="Person looking through window">
-                <div class="welcome-text">
-                    <h2>Welcome, Looks like you're new here!</h2>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Studying Online is now much easier</h1>
+                    <p class="hero__text">WordWander is an interesting platform that will teach you in more an interactive way</p>
+                    <button class="btn btn--start">Let's Start</button>
+                </div>
+                <div class="hero__image">
+                    <img src="./images/Vector.png" width="100" height="100" alt="Online learning illustration">
+
+
                 </div>
             </div>
+        </section>
 
-            <!-- Right Side - Login Form -->
-            <div class="login-form-container">
-                <div class="login-form-wrapper">
-                    <h1>Log In</h1>
-                    <p class="signup-prompt">
-                        New to WordWander? 
-                        <a href="signup.html" class="signup-link">Sign Up</a>
+        <!-- Features Section -->
+        <section class="feature-section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="feature-card">
+                        <h2>You can learn online and sit in Your Home</h2>
+                        <p>WordWander is a quick and convenient online test to help higher education institutions and employers check the English levels of individuals and groups of candidates.</p>
+                    </div>
+                    <div class="hero-image">
+                        <img src="images/img.png" alt="Online learning">
+                    </div>
+                    <div class="hero-image">
+                        <img src="images/image 12.png" alt="Language learning">
+                    </div>
+                    <div class="feature-card">
+                        <h2>You Speak Up To 6 Month Faster Than Now</h2>
+                        <p>At WordWander, our collection of free teaching resources, lesson plans, and activities is designed to help you learn Kinyarwanda, French, and English, supporting your language learning journey.</p>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Popular Courses Section -->
+        <section class="course-section" id="courses">
+            <div class="container">
+                <h2 class="section-title">Popular Courses</h2>
+                <div class="course-grid" id="courseGrid">
+                    <article class="course-card">
+                        <div class="course-image-wrapper">
+                            <img
+                                src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/d7162b489d14d3a6b0832e4416a64e0eb89312c15e073d2b36001aaf45beaeb5"
+                                class="course-image"
+                                alt="Kinyarwanda course"
+                            />
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Understand basic words in Kinyarwanda</h3>
+                            <div class="course-meta">
+                                <div class="meta-item">
+                                    <span class="meta-icon"></span>
+                                    <span class="meta-text">Lesson : 6</span>
+                                </div>
+                                <div class="meta-item">
+                                    <img
+                                        src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/84f00a35c96036b938cfc415d43c85dcbd474a7148246700d8af4b6cfeb39831"
+                                        class="meta-icon"
+                                        alt="Students icon"
+                                    />
+                                    <span class="meta-text">student : 198</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-icon"></span>
+                                    <span class="meta-text">Advanced</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="start-course-btn">
+                                <span>Start Course</span>
+                                <img
+                                    src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/bdab6ccb64acb515b123ab13ff1d214cf61ad7cb5e4af814b88d8a2a591fca4f"
+                                    alt="Arrow"
+                                />
+                            </button>
+
+                            <img
+                        src="https://cdn.builder.io/api/v1/image/assets/5c4478205ec64172a99644d8bfc4a0a6/f9a413b101ab71677a07d51845fc6740e4c748f8439f3f8908fc6427f5837e61"
+                        class="course-badge"
+                        alt="Course badge"
+                    />
+                </div>
+            </article>
+
+                </div>
+                <button class="see-all-btn">
+                    See all courses
+                    <img src="images/arrow_forward_ios.svg" alt="Arrow right">
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <p class="footer-tagline">
+                        Fluency is nothing more than mastering the 100 most important real-life conversations
+
                     </p>
-
-                    <form id="loginForm" class="login-form">
-                        <div class="form-group">
-                            <label for="email">Email or username</label>
-                            <div class="input-wrapper">
-                                <input type="text" id="email" name="email" placeholder="Enter your Email or username">
-                                <img src="images/lock.svg" alt="Email icon" class="input-icon">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <div class="input-wrapper">
-                                <input type="password" id="password" name="password" placeholder="Enter your Password">
-                                <img src="images/lock.svg" alt="Password icon" class="input-icon">
-                            </div>
-                        </div>
-
-                        <div class="form-options">
-                            <label class="remember-me">
-                                <input type="checkbox" name="remember">
-                                <span class="checkbox-label">Remember Me</span>
-                            </label>
-                            <a href="#" class="forgot-password">Forgot password?</a>
-                        </div>
-
-                        <button type="submit" class="login-button">Log In</button>
-
-                        <div class="social-login">
-                            <p>Or continue with</p>
-                            <div class="social-buttons">
-                                <button type="button" class="social-button google">
-                                    <img src="images/google.svg" alt="Google">
-                                </button>
-                                <button type="button" class="social-button facebook">
-                                    <img src="images/facebook.svg" alt="Facebook">
-                                </button>
-                                <button type="button" class="social-button instagram">
-                                    <img src="images/instagram.svg" alt="Instagram">
-                                </button>
-                            </div>
-                        </div>
-
-                        <p class="signup-prompt-mobile">
-                            Don't have an Account? <a href="signup.html">Sign Up</a>
-                        </p>
-                    </form>
+                </div>
+                <div class="footer-courses">
+                    <h4 class="footer-title">WordWander courses</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Learn English</a></li>
+                        <li><a href="#">Learn Kinyarwanda</a></li>
+                        <li><a href="#">Learn French</a></li>
+                    </ul>
+                </div>
+                <div class="footer-products">
+                    <h4 class="footer-title">Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Landing page</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contact information</h4>
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <img src="images/phone-icon.svg" alt="Phone">
+                            <span>+34933478486</span>
+                        </li>
+                        <li class="contact-item">
+                            <span>Info@wordwander.co</span>
+                        </li>
+                        <li class="contact-item">
+                            <img src="images/location-icon.svg" alt="Location">
+                            <span>Kigali/ Rwanda</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><img src="images/Facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/LinkedIn.png" alt="LinkedIn"></a>
+                <a href="#"><img src="images/Twitter.png" alt="Twitter"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-wrapper">
+                <p class="copyright">2025 WordWander. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#" class="legal-link">Terms & Conditions</a>
+                    <a href="#" class="legal-link">Privacy Policy</a>
                 </div>
             </div>
         </div>
-    </main>
+    </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="js/main.js"></script>
 </body>
 </html>

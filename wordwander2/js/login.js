@@ -1,5 +1,6 @@
 // login.js
 document.addEventListener('DOMContentLoaded', function() {
+
     console.log('DOM Content Loaded');
     
     const loginForm = document.getElementById('loginForm');
@@ -31,4 +32,70 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Please enter both email and password');
         }
     });
+
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        // Log the full path
+        console.log('Loading image:', img.src);
+        
+        img.onerror = function() {
+            console.error('Failed to load:', img.src);
+            // Try with adjusted path
+            if (!img.src.includes('/images/')) {
+                const newSrc = 'images/' + img.src.split('/').pop();
+                console.log('Trying alternate path:', newSrc);
+                img.src = newSrc;
+            }
+        };
+        
+        img.onload = function() {
+            console.log('Successfully loaded:', img.src);
+        };
+    });
+
+    const menuToggle = document.querySelector('.nav__toggle');
+    const menuItems = document.querySelector('.nav__menu');
+    
+    if (menuToggle && menuItems) {
+        menuToggle.addEventListener('click', () => {
+            menuItems.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menuItems.contains(e.target) && !menuToggle.contains(e.target)) {
+                menuItems.classList.remove('active');
+            }
+        });
+    }
 });
+
+const availableImages = {
+    // Logo
+    logo: 'images/logo.jpg',
+    
+    // Icons
+    arrow: 'images/arrow_forward_ios.svg',
+    user: 'images/Vector.png',
+    lock: 'images/lock.png',
+    location: 'images/location.svg',
+    settings: 'images/settings.svg',
+    profile: 'images/profile.svg',
+    courses: 'images/courses.svg',
+    logout: 'images/logout.svg',
+    
+    // Social Media
+    facebook: 'images/Facebook.png',
+    twitter: 'images/Twitter.png',
+    linkedin: 'images/LinkedIn.png',
+    instagram: 'images/instagram-line.svg',
+    
+    // Illustrations
+    loginIllustration: 'images/Rectangle.jpg',
+    welcome: 'images/welcome.svg',
+    
+    // Flags
+    english: 'images/english.svg',
+    french: 'images/french.svg',
+    kinyarwanda: 'images/kinyarwanda.svg'
+};
