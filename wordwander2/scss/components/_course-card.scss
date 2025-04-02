@@ -90,7 +90,7 @@
             transition: background 0.3s ease;
 
             &:hover {
-                background-color: color.adjust($bg-color, $lightness: -5%);
+                background-color: color.adjust(vars.$light-bg, $lightness: -5%);
 
 
             }
