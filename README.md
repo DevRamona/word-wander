@@ -33,24 +33,24 @@ Word Wander is a responsive web application designed to make language learning e
 
 ```
 wordwander2/
-├── css/                  # Stylesheets
-├── images/               # Image assets
-├── js/                   # JavaScript files
-├── scss/                 # SCSS files for styling
-├── about.html            # About page
-├── contact.html          # Contact page
-├── courses.html          # Courses listing page
-├── dashboard.html        # User dashboard
-├── db.json               # Mock database
-├── index.html            # Home page
-├── language-cards.html   # Vocabulary flashcards
-├── lesson-complete.html  # Lesson completion page
-├── level-test.html       # Language proficiency test
-├── level-test-result.html # Test results page
-├── login.html            # User authentication
-├── package.json          # Project dependencies
-├── package-lock.json     # Dependency lock file
-└── settings.html         # User settings page
+├── css/                  
+├── images/              
+├── js/                  
+├── scss/                
+├── about.html            
+├── contact.html         
+├── courses.html          
+├── dashboard.html        
+├── db.json               
+├── index.html           
+├── language-cards.html   
+├── lesson-complete.html 
+├── level-test.html      
+├── level-test-result.html 
+├── login.html           
+├── package.json          
+├── package-lock.json    
+└── settings.html         
 ```
 
 ## Development Phases
@@ -123,12 +123,3 @@ wordwander2/
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Thanks to all contributors who have helped build and improve Word Wander
-- Special thanks to language learning experts who provided guidance on effective learning methodologies
