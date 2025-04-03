@@ -30,7 +30,6 @@ body {
     @include container;
 }
 
-// Header styles
 .header {
     background: white;
     padding: 15px 0;
@@ -134,7 +133,6 @@ body {
     }
 }
 
-// Contact Info Cards
 .contact-info {
     position: relative;
     z-index: 2;
@@ -187,7 +185,6 @@ body {
     }
 }
 
-// Contact Form
 .contact-form {
     padding: 3rem 0 5rem;
     background: #f8f7fe;
@@ -264,7 +261,7 @@ body {
     }
 }
 
-// Footer
+
 .main-footer {
     background: $primary-purple;
     color: white;
@@ -378,7 +375,6 @@ body {
     }
 }
 
-// Responsive styles
 @media (max-width: 768px) {
     .nav {
         &__menu {

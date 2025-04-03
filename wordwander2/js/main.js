@@ -1,7 +1,5 @@
-// API Configuration
 const API_BASE_URL = 'http://localhost:3000';
 
-// User Management
 class UserManager {
     constructor() {
         this.currentUser = null;
@@ -48,9 +46,7 @@ class UserManager {
 
     loadUserPreferences() {
         if (this.currentUser?.preferences) {
-            // Apply theme
             $('body').attr('data-theme', this.currentUser.preferences.theme);
-            // Apply language
             $('#languageSelect').val(this.currentUser.preferences.language);
         }
     }
@@ -72,7 +68,6 @@ class UserManager {
     }
 }
 
-// Course Management
 class CourseManager {
     async loadCourses() {
         try {
@@ -107,7 +102,6 @@ class CourseManager {
     }
 }
 
-// Lesson Management
 class LessonManager {
     async loadLesson(lessonId) {
         try {
@@ -159,14 +153,11 @@ class LessonManager {
     }
 }
 
-// Initialize managers
 const userManager = new UserManager();
 const courseManager = new CourseManager();
 const lessonManager = new LessonManager();
 
-// Event Handlers
 $(document).ready(() => {
-    // Login form submission
     $('#loginForm').on('submit', async (e) => {
         e.preventDefault();
         const email = $('#email').val();
@@ -179,42 +170,35 @@ $(document).ready(() => {
         }
     });
 
-    // Logout button
     $('.logout-btn').on('click', () => {
         userManager.logout();
     });
 
-    // Theme toggle
     $('#themeToggle').on('change', function() {
         const theme = $(this).prop('checked') ? 'dark' : 'light';
         userManager.updatePreferences({ ...userManager.currentUser.preferences, theme });
     });
 
-    // Language selection
     $('#languageSelect').on('change', function() {
         const language = $(this).val();
         userManager.updatePreferences({ ...userManager.currentUser.preferences, language });
     });
 
-    // Start course button
     $(document).on('click', '.start-course', function() {
         const courseId = $(this).data('course-id');
         window.location.href = `lesson.html?courseId=${courseId}`;
     });
 
-    // Answer submission
     $(document).on('click', '.option', async function() {
         const answer = $(this).data('value');
         const lessonId = new URLSearchParams(window.location.search).get('lessonId');
         await lessonManager.submitAnswer(lessonId, answer);
     });
 
-    // Load courses if on dashboard
     if ($('.courses-container').length) {
         courseManager.loadCourses();
     }
 
-    // Load lesson if on lesson page
     if ($('.lesson-container').length) {
         const lessonId = new URLSearchParams(window.location.search).get('lessonId');
         if (lessonId) {

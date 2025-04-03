@@ -1,5 +1,4 @@
 @use "sass:color";
-// Variables
 $primary-purple: #8A2BE2;
 $text-dark: #333333;
 $text-secondary: #666666;
@@ -7,9 +6,8 @@ $border-color: #E0E0E0;
 $background-light: #F8F9FA;
 $white: #FFFFFF;
 
-// Add these styles at the top of your file, after the variables
 .header {
-    height: 70px; // Reduced from default height
+    height: 70px; 
     border-bottom: 1px solid rgba($text-secondary, 0.1);
     background: $white;
     
@@ -22,7 +20,7 @@ $white: #FFFFFF;
   
       &__logo {
         img {
-          height: 40px; // Reduced logo size
+          height: 40px; 
           width: auto;
         }
       }
@@ -34,7 +32,7 @@ $white: #FFFFFF;
   
           li {
             a {
-              font-size: 0.95rem; // Reduced font size
+              font-size: 0.95rem; 
               color: $text-dark;
               text-decoration: none;
               transition: color 0.3s ease;
@@ -53,7 +51,7 @@ $white: #FFFFFF;
         gap: 1.5rem;
   
         .nav-profile {
-          width: 35px; // Reduced profile image size
+          width: 35px; 
           height: 35px;
           border-radius: 50%;
           overflow: hidden;
@@ -73,7 +71,7 @@ $white: #FFFFFF;
         }
   
         .hamburger {
-          display: none; // Hide on desktop
+          display: none; 
           @media (max-width: 768px) {
             display: block;
           }
@@ -82,9 +80,7 @@ $white: #FFFFFF;
     }
   }
   
-  // ... rest of your existing styles ...
-
-// Settings Section
+ 
 .settings-section {
     padding: 3rem;
     max-width: 1200px; 

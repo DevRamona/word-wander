@@ -27,5 +27,4 @@ function initMap() {
     });
 }
 
-// Initialize map when the page loads
 window.addEventListener('load', initMap);

@@ -41,7 +41,6 @@
     --error-color: #DC3545;
 }
 
-// Dark theme
 [data-theme="dark"] {
     --background: #1A1A1A;
     --card-bg: #2D2D2D;
@@ -55,7 +54,6 @@
     --toggle-bg: #404040;
 }
 
-// Base styles
 * {
     margin: 0;
     padding: 0;
@@ -71,14 +69,12 @@ body {
 }
 
 
-// Layout
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-// Header
 .header {
     background: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -159,7 +155,6 @@ body {
     }
 }
 
-// User Profile
 .user-profile {
     display: flex;
     align-items: center;
@@ -184,7 +179,6 @@ body {
     }
 }
 
-// Responsive Design
 @media (max-width: 768px) {
     .header {
         .nav {
@@ -208,7 +202,6 @@ body {
     }
 }
 
-// Accessibility
 @media (prefers-reduced-motion: reduce) {
     * {
         transition: none !important;
@@ -216,7 +209,6 @@ body {
     }
 }
 
-// Focus styles for keyboard navigation
 :focus-visible {
     outline: 3px solid var(--primary-color);
     outline-offset: 2px;

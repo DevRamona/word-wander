@@ -3228,19 +3228,19 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #FFFFFF;
+  background: #ffffff;
   border-bottom: 1px solid rgba(102, 102, 102, 0.1);
 }
 
 .main-wrapper {
   display: flex;
   flex: 1;
-  background: #F8F8F8;
+  background: #f8f8f8;
 }
 
 .sidebar {
   width: 280px;
-  background: #FFFFFF;
+  background: #ffffff;
   padding: 24px;
   border-right: 1px solid rgba(102, 102, 102, 0.1);
   height: calc(100vh - 70px);
@@ -3270,7 +3270,7 @@ body {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #FFFFFF;
+  border: 3px solid #ffffff;
   box-shadow: 0 4px 12px rgba(139, 29, 186, 0.15);
   transition: all 0.3s ease;
 }
@@ -3332,7 +3332,7 @@ body {
 }
 .sidebar .menu ul li a:hover {
   background: rgba(139, 29, 186, 0.08);
-  color: #8B1DBA;
+  color: #8b1dba;
   transform: translateX(4px);
 }
 .sidebar .menu ul li a:hover img {
@@ -3340,8 +3340,8 @@ body {
   transform: scale(1.1);
 }
 .sidebar .menu ul li.active a {
-  background: #8B1DBA;
-  color: #FFFFFF;
+  background: #8b1dba;
+  color: #ffffff;
 }
 .sidebar .menu ul li.active a img {
   opacity: 1;
@@ -3351,7 +3351,7 @@ body {
   margin-top: 32px;
 }
 .sidebar .menu ul li.logout a {
-  color: #FF4B4B;
+  color: #ff4b4b;
 }
 .sidebar .menu ul li.logout a:hover {
   background: rgba(255, 75, 75, 0.08);
@@ -3361,7 +3361,7 @@ body {
   flex: 1;
   padding: 32px;
   min-height: calc(100vh - 70px);
-  background: #F8F8F8;
+  background: #f8f8f8;
   position: relative;
 }
 .main-content .page-title {
@@ -3385,7 +3385,7 @@ body {
   padding-top: 100px;
 }
 .main-content .courses-grid .course-card {
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -3432,7 +3432,7 @@ body {
 .main-content .courses-grid .course-card .course-content .progress-bar .progress {
   width: 25%;
   height: 100%;
-  background: #8B1DBA;
+  background: #8b1dba;
   border-radius: 3px;
 }
 
