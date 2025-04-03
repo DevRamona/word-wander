@@ -1,4 +1,7 @@
-// Interactive Elements Styling
+@use '../variables' as vars;
+@use '../mixins' as *;
+@use "sass:color";
+
 .course-card {
     background: var(--card-bg);
     border-radius: 12px;
@@ -101,7 +104,36 @@
         }
     }
 }
-
+.see-all-btn {
+    display: block; 
+    margin: 40px auto; 
+    padding: 14px 32px;
+    background: vars.$primary-color;
+    color: vars.$white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  
+    &:hover {
+      background: color.adjust(vars.$primary-color, $lightness:-5%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(vars.$primary-color, 0.3);
+    }
+  
+    &:active {
+      transform: translateY(0);
+    }
+  
+    &-container {
+      text-align: center;
+      padding: 20px 0;
+    }
+  }
 // Form Styling
 .form-group {
     margin-bottom: 20px;

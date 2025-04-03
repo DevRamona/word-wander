@@ -95,6 +95,8 @@ img[src*=Facebook], img[src*=Twitter], img[src*=LinkedIn], img[src*=instagram-li
   position: sticky;
   top: 0;
   z-index: 100;
+  padding: 16px 40px;
+  border-bottom: 1px solid rgba(102, 102, 102, 0.1);
 }
 .header .container {
   max-width: 1200px;
@@ -105,22 +107,30 @@ img[src*=Facebook], img[src*=Twitter], img[src*=LinkedIn], img[src*=instagram-li
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
 }
 .header .nav__logo img {
   height: 40px;
+  object-fit: contain;
 }
 .header .nav__menu ul {
   display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   gap: 2rem;
   list-style: none;
 }
-.header .nav__menu ul a {
+.header .nav__menu ul li a {
   color: var(--text-primary);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
-.header .nav__menu ul a:hover {
+.header .nav__menu ul li a:hover {
   color: var(--primary-color);
 }
 .header .nav__actions {
@@ -184,8 +194,37 @@ img[src*=Facebook], img[src*=Twitter], img[src*=LinkedIn], img[src*=instagram-li
   .nav__menu ul li a {
     font-size: 1.25rem;
   }
+  .nav__cta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .nav__cta .btn--start {
+    background: #633283;
+    color: #FFFFFF;
+    padding: 12px 32px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .nav__cta .btn--start:hover {
+    background: rgb(85.0524861878, 42.955801105, 112.544198895);
+    transform: translateY(-2px);
+  }
   .nav__cta .btn--login {
-    display: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    border: 2px solid #633283;
+    background: transparent;
+    color: #633283;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
   .nav .hamburger {
     display: flex;
@@ -240,15 +279,15 @@ body {
   margin-bottom: 2rem;
 }
 .hero__image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  max-width: 600px;
 }
 .hero__image img {
-  max-width: 100%;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 .hero .btn--start {
   padding: 0.8rem 2rem;
@@ -549,12 +588,17 @@ body {
   background: #FFFFFF;
   border-radius: 8px;
   padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   width: 280px;
   transition: transform 0.3s ease;
 }
+.language-section .cards-container .language-card:focus {
+  outline: 2px solid #633283;
+  outline-offset: 2px;
+}
 .language-section .cards-container .language-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 .language-section .cards-container .language-card .flag-wrapper {
   width: 120px;
@@ -576,6 +620,8 @@ body {
 .language-section .cards-container .language-card .learners-count {
   color: #666666;
   font-size: 0.875rem;
+  margin: 0;
+  text-align: center;
 }
 .language-section .cards-container .nav-button {
   position: absolute;
@@ -687,6 +733,34 @@ body {
   background: var(--error-color);
   color: white;
   border-color: var(--error-color);
+}
+
+.see-all-btn {
+  display: block;
+  margin: 40px auto;
+  padding: 14px 32px;
+  background: #633283;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.see-all-btn:hover {
+  background: rgb(85.0524861878, 42.955801105, 112.544198895);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(99, 50, 131, 0.3);
+}
+.see-all-btn:active {
+  transform: translateY(0);
+}
+.see-all-btn-container {
+  text-align: center;
+  padding: 20px 0;
 }
 
 .form-group {

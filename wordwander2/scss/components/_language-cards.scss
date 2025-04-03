@@ -31,12 +31,18 @@
       background: vars.$white;
       border-radius: vars.$border-radius;
       padding: vars.$spacing-base * 2;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
       width: 280px;
       transition: transform 0.3s ease;
 
+      &:focus {
+        outline: 2px solid vars.$primary-color;
+        outline-offset: 2px;
+    }
+
       &:hover {
         transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
       }
 
       .flag-wrapper {
@@ -62,6 +68,8 @@
       .learners-count {
         color: vars.$text-secondary;
         font-size: 0.875rem;
+        margin: 0;
+        text-align: center;
       }
     }
 
