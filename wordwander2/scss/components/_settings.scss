@@ -1,391 +1,356 @@
 @use "sass:color";
-
+// Variables
 $primary-purple: #8A2BE2;
 $text-dark: #333333;
 $text-secondary: #666666;
 $border-color: #E0E0E0;
-$background-light: #ffffff;
+$background-light: #F8F9FA;
+$white: #FFFFFF;
 
-// Mixins
-@mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-// Dashboard Layout
-.dashboard-layout {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    min-height: 100vh;
-    background: $background-light;
-}
-
-// Sidebar
-.sidebar {
-    background: white;
-    padding: 2rem 1.5rem;
-    border-right: 1px solid rgba($text-dark, 0.1);
-
-    .user-profile {
+// Add these styles at the top of your file, after the variables
+.header {
+    height: 70px; // Reduced from default height
+    border-bottom: 1px solid rgba($text-secondary, 0.1);
+    background: $white;
+    
+    .nav {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+  
+      &__logo {
+        img {
+          height: 40px; // Reduced logo size
+          width: auto;
+        }
+      }
+  
+      &__menu {
+        ul {
+          display: flex;
+          gap: 2rem;
+  
+          li {
+            a {
+              font-size: 0.95rem; // Reduced font size
+              color: $text-dark;
+              text-decoration: none;
+              transition: color 0.3s ease;
+  
+              &:hover, &.active {
+                color: $primary-purple;
+              }
+            }
+          }
+        }
+      }
+  
+      &__cta {
         display: flex;
         align-items: center;
-        gap: 1rem;
-        margin-bottom: 2.5rem;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid rgba($text-dark, 0.1);
-
-        .profile-image {
-            position: relative;
-            width: 48px;
-            height: 48px;
-
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                object-fit: cover;
-            }
-
-            .status-badge {
-                position: absolute;
-                bottom: -2px;
-                right: -2px;
-                width: 12px;
-                height: 12px;
-                background: #4CAF50;
-                border: 2px solid white;
-                border-radius: 50%;
-            }
+        gap: 1.5rem;
+  
+        .nav-profile {
+          width: 35px; // Reduced profile image size
+          height: 35px;
+          border-radius: 50%;
+          overflow: hidden;
+          border: 2px solid $primary-purple;
+          transition: all 0.3s ease;
+  
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+  
+          &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba($primary-purple, 0.2);
+          }
         }
+  
+        .hamburger {
+          display: none; // Hide on desktop
+          @media (max-width: 768px) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  
+  // ... rest of your existing styles ...
 
-        .user-info {
-            h3 {
-                font-size: 1rem;
-                color: $text-dark;
-                margin-bottom: 0.25rem;
-                font-weight: 500;
+// Settings Section
+.settings-section {
+    padding: 3rem;
+    max-width: 1200px; 
+    width: 100%;
+    margin: 0 auto;
+    min-height: calc(100vh - 70px); 
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        color: $text-dark;
+        font-size: 2rem; 
+        margin-bottom: 3rem; 
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 1rem;
+        
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px; 
+            height: 4px; 
+            background: $primary-purple;
+            border-radius: 2px;
+        }
+    }
+    .nav__cta {
+        .nav-profile {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid $primary-purple;
+            transition: all 0.3s ease;
+    
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 15px rgba($primary-purple, 0.2);
             }
-
-            .location {
-                display: flex;
-                align-items: center;
-                gap: 0.25rem;
-                color: $text-secondary;
-                font-size: 0.813rem;
-
-                svg {
-                    width: 14px;
-                    height: 14px;
-                    color: $text-secondary;
-                }
+    
+            .nav-profile-img {
+                width: 50%;
+                height: 50%;
+                object-fit: cover;
             }
         }
     }
 
     .menu {
         h4 {
+            font-size: 14px;
+            font-weight: 600;
             color: $text-secondary;
-            font-size: 0.875rem;
-            margin-bottom: 1rem;
-            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            padding: 0 12px;
         }
-
+    
         ul {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-
+            list-style: none;
+            padding: 0;
+            margin: 0;
+    
             li {
+                margin-bottom: 8px;
+    
                 a {
                     display: flex;
                     align-items: center;
-                    gap: 0.75rem;
-                    padding: 0.75rem 1rem;
+                    padding: 12px 16px;
+                    border-radius: 12px;
                     color: $text-dark;
                     text-decoration: none;
-                    border-radius: 8px;
-                    transition: all 0.2s ease;
-                    font-size: 0.938rem;
-
-                    svg {
-                        width: 18px;
-                        height: 18px;
+                    transition: all 0.3s ease;
+                    gap: 12px;
+    
+                    img {
+                        width: 20px;
+                        height: 20px;
                         opacity: 0.7;
-                    }
-
-                    &:hover {
-                        background: rgba($primary-purple, 0.05);
-                    }
-                }
-
-                &.active a {
-                    background: rgba($primary-purple, 0.1);
-                    color: $primary-purple;
-                    font-weight: 500;
-
-                    svg {
-                        opacity: 1;
-                        path {
-                            fill: $primary-purple;
+                        transition: all 0.3s ease;
+                    } &:hover {
+                        background: rgba($primary-purple, 0.08);
+                        color: $primary-purple;
+    
+                        img {
+                            opacity: 1;
                         }
                     }
                 }
-
-                &.logout {
-                    margin-top: 2rem;
-
+    
+                &.active {
                     a {
-                        color: #FF0000;
-
-                        svg {
+                        background: $primary-purple;
+                        color: $white;
+                        font-weight: 500;
+    
+                        img {
                             opacity: 1;
-                            path {
-                                stroke: #FF0000;
-                            }
+                            filter: brightness(0) invert(1);
+                        }
+    
+                        &:hover {
+                            transform: translateX(4px);
+                        }
+                    }
+                }
+    
+                &.logout {
+                    margin-top: 24px;
+                    
+                    a {
+                        color: #FF4B4B;
+    
+                        &:hover {
+                            background: rgba(#FF4B4B, 0.08);
                         }
                     }
                 }
             }
         }
     }
-}
 
-// Settings Section
-.settings-section {
-    padding: 2.5rem 2rem;
-    max-width: 720px;
-    margin: 0 auto;
-
-    h1 {
-        color: $primary-purple;
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-        font-weight: 600;
-    }
-
+    
     .settings-form {
-        background: white;
-        border-radius: 12px;
-        padding: 2rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        background: $white;
+        border-radius: 24px; 
+        padding: 3.5rem; 
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 3rem;
 
         .form-group {
-            margin-bottom: 1.25rem;
+            margin-bottom: 2.5rem;
+
+            &:last-child {
+                margin-bottom: 2rem;
+            }
+
+            &:nth-child(3),
+            &:nth-child(4),
+            &:last-child {
+                grid-column: 1 / -1;
+            }
 
             label {
                 display: block;
                 color: $text-dark;
-                margin-bottom: 0.5rem;
-                font-size: 0.875rem;
+                margin-bottom: 1rem;
+                font-size: 1.1rem; 
                 font-weight: 500;
             }
 
             input, select {
                 width: 100%;
-                padding: 0.75rem 1rem;
-                border: 1px solid rgba($text-dark, 0.15);
-                border-radius: 6px;
+                padding: 1.125rem 1.5rem; 
+                border: 2px solid rgba($text-secondary, 0.15);
+                border-radius: 12px;
                 font-family: 'Poppins', sans-serif;
-                font-size: 0.875rem;
+                font-size: 1.1rem; 
                 color: $text-dark;
+                transition: all 0.3s ease;
 
                 &:focus {
                     outline: none;
                     border-color: $primary-purple;
-                    box-shadow: 0 0 0 3px rgba($primary-purple, 0.1);
+                    box-shadow: 0 0 0 4px rgba($primary-purple, 0.1);
                 }
 
                 &[readonly] {
-                    background-color: rgba($text-dark, 0.03);
+                    background-color: rgba($text-secondary, 0.05);
                     cursor: not-allowed;
-                }
-
-                &::placeholder {
-                    color: rgba($text-dark, 0.4);
+                    border-style: dashed;
                 }
             }
 
             select {
                 appearance: none;
-                background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23333333' stroke-width='1.5'/%3E%3C/svg%3E");
+                background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23666666' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
                 background-repeat: no-repeat;
-                background-position: right 1rem center;
-                padding-right: 2.5rem;
+                background-position: right 1.5rem center;
+                padding-right: 3.5rem;
             }
         }
 
-        .password-section {
-            margin: 2rem 0;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba($text-dark, 0.1);
+        .password-input {
+            position: relative;
+            margin-bottom: 1.5rem;
 
-            h2 {
-                color: $text-dark;
-                font-size: 1.125rem;
-                margin-bottom: 1.5rem;
-                font-weight: 600;
+            label {
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
             }
 
-            .password-input {
-                position: relative;
+            input {
+                padding-right: 3.5rem;
+            }
 
-                input {
-                    padding-right: 2.75rem;
-                }
+            .toggle-password {
+                position: absolute;
+                right: 1.5rem;
+                top: 65%;
+                transform: translateY(-50%);
+                padding: 0.75rem;
 
-                .toggle-password {
-                    position: absolute;
-                    right: 1rem;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    background: none;
-                    border: none;
-                    cursor: pointer;
-                    padding: 0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    svg {
-                        width: 20px;
-                        height: 20px;
-                        opacity: 0.4;
-                        transition: opacity 0.2s ease;
-                    }
-
-                    &:hover svg {
-                        opacity: 0.7;
-                    }
+                svg {
+                    width: 24px; 
+                    height: 24px; 
                 }
             }
         }
 
         .save-button {
             width: 100%;
-            padding: 0.875rem;
+            padding: 1.25rem; 
             background: $primary-purple;
-            color: white;
+            color: $white;
             border: none;
-            border-radius: 6px;
-            font-size: 0.938rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            margin-top: 0.5rem;
+            border-radius: 14px;
+            font-size: 1.125rem; 
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-top: 2.5rem;
 
             &:hover {
                 background: color.adjust($primary-purple, $lightness: -5%);
-                transform: translateY(-1px);
-            }
-
-            &:active {
-                transform: translateY(0);
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba($primary-purple, 0.3);
             }
         }
     }
 }
 
-// Header styles
-.header {
-    background: white;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid rgba($text-dark, 0.1);
-
-    .nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 1.5rem;
-
-        &__logo {
-            img {
-                height: 32px;
-            }
-        }
-
-        &__menu {
-            ul {
-                display: flex;
-                gap: 2rem;
-
-                a {
-                    color: $text-dark;
-                    text-decoration: none;
-                    font-size: 0.938rem;
-                    font-weight: 500;
-                    transition: color 0.2s ease;
-
-                    &:hover {
-                        color: $primary-purple;
-                    }
-                }
-            }
-        }
-
-        &__actions {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-
-            .language-selector {
-                display: flex;
-                align-items: center;
-                gap: 0.375rem;
-                cursor: pointer;
-                font-size: 0.875rem;
-                font-weight: 500;
-
-                svg {
-                    width: 10px;
-                    height: 6px;
-                    opacity: 0.7;
-                }
-            }
-
-            .user-profile {
-                width: 32px;
-                height: 32px;
-                border-radius: 50%;
-                overflow: hidden;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: rgba($text-dark, 0.05);
-            }
-        }
-    }
-}
-
-// Responsive styles
 @media (max-width: 1024px) {
-    .dashboard-layout {
-        grid-template-columns: 240px 1fr;
+    .settings-section {
+        padding: 2rem;
+
+        .settings-form {
+            grid-template-columns: 1fr;
+            padding: 2.5rem;
+        }
     }
 }
 
 @media (max-width: 768px) {
-    .dashboard-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .sidebar {
-        display: none;
-    }
-
     .settings-section {
         padding: 1.5rem;
 
-        .settings-form {
-            padding: 1.5rem;
-        }
-    }
+        h1 {
+            font-size: 1.75rem;
+            text-align: center;
 
-    .header {
-        .nav {
-            &__menu {
-                display: none;
+            &:after {
+                left: 50%;
+                transform: translateX(-50%);
             }
+        }
+
+        .settings-form {
+            padding: 2rem;
+            border-radius: 16px;
         }
     }
 }

@@ -19,7 +19,15 @@
     &:hover {
         transform: translateY(-5px);
     }
+    .course-card-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
 
+        &:hover {
+            text-decoration: none;
+        }
+    }
     &__image {
         position: relative;
         aspect-ratio: 16/9;

@@ -9,31 +9,32 @@
 </head>
 <body>
   
-    <header class="header">
-        <nav class="nav">
-            <div class="nav__logo">
-                <img src="images/logo.svg" alt="WordWander">
-            </div>
-            <div class="nav__menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                    <li><a href="about.html">About us</a></li>
-                </ul>
-            </div>
-            <div class="nav__actions">
-                <div class="language-selector">
-                    <span>EN</span>
-                    <img src="images/arrow-down.svg" alt="Select language">
+  
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__logo">
+        <img src="images/logo.jpg" alt="WordWander" />
+      </div>
+      <div class="nav__menu" id="navMenu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav__cta">
+        <div class="nav-profile">
+            <img src="images/2333.jpg" alt="Maya atay">
                 </div>
-                <a href="#" class="user-profile">
-                    <img src="images/profile-icon.svg" alt="Profile">
-                </a>
-            </div>
-        </nav>
-    </header>
-
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
     <main class="lesson-complete">
         <div class="completion-card">
             <div class="completion-illustration">
@@ -116,5 +117,6 @@
           </div>
         </div>
       </footer>
+      <script src="js/lesson-complete.js"></script>
 </body>
 </html>

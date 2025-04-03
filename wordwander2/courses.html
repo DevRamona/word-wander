@@ -9,25 +9,31 @@
 <body>
     <div class="app-container">
         <header class="header">
-            <nav>
-                <div class="logo">
-                    <img src="images/logo.jpg" alt="WordWander">
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#" class="active">Courses</a></li>
-                    <li><a href="#">Contact us</a></li>
-                    <li><a href="#">About us</a></li>
+            <nav class="nav">
+              <div class="nav__logo">
+                <img src="images/logo.jpg" alt="WordWander" />
+              </div>
+              <div class="nav__menu" id="navMenu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="courses.html" class="active">Courses</a></li>
+                  <li><a href="about.html">About us</a></li>
+                  <li><a href="contact.html">Contact</a></li>
                 </ul>
-                <div class="nav-right">
-                    <div class="language-selector">
-                        EN
-                    </div>
-                </div>
+              </div>
+              <div class="nav__cta">
+                <div class="nav-profile">
+                    <img src="images/2333.jpg" alt="Maya atay">
+                        </div>
+                <button class="hamburger" id="hamburger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
             </nav>
-        </header>
-
-        <div class="content-wrapper">
+          </header>
+        <div class="main-wrapper">
             <aside class="sidebar">
                 <div class="user-profile">
                     <div class="profile-image">
@@ -77,30 +83,32 @@
                 <h1 class="page-title">My Courses</h1>
                 <div class="courses-grid">
                     <div class="course-card">
-                        <div class="course-image">
-                            <img src="images/Rectangle.jpg" alt="Historical site">
-                        </div>
-                        <div class="course-content">
-                            <h3>Learning historical words and sentences</h3>
-                            <div class="course-meta">
-                                <div class="meta-item">
-                                    Lesson : 6
+                        <a href="level-test.html" class="course-card-link">
+                            <div class="course-image">
+                                <img src="images/Rectangle.jpg" alt="Historical site">
+                            </div>
+                            <div class="course-content">
+                                <h3>Learning historical words and sentences</h3>
+                                <div class="course-meta">
+                                    <div class="meta-item">
+                                        Lesson : 6
+                                    </div>
+                                    <div class="meta-item">
+                                        student : 198
+                                    </div>
+                                    <div class="meta-item">
+                                        Advanced
+                                    </div>
                                 </div>
-                                <div class="meta-item">
-                                    student : 198
+                                <div class="progress-bar">
+                                    <div class="progress"></div>
                                 </div>
-                                <div class="meta-item">
-                                    Advanced
+                                <div class="card-footer">
+                                    <button class="start-course">Start Course</button>
                                 </div>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress"></div>
-                            </div>
-                            <div class="card-footer">
-                                <button class="start-course">Start Course</button>
-                            </div>
-                        </div>
-                    </div>
+                        </a>
+                    </div>  
                     <div class="course-card">
                         <div class="course-image">
                             <img src="images/Rectangle.jpg" alt="Historical site">
@@ -204,66 +212,68 @@
                 </div>
 
             </main>
+        </div>
             
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-grid">
+  
+        <footer class="main-footer">
+            <div class="footer-content">
+              <div class="footer-grid">
                 <div class="footer-about">
-                    <p class="footer-tagline">
-              Fluency is nothing more than mastering the 100 most important
-              real-life conversations
-                    </p>
+                  <p class="footer-tagline">
+                    Fluency is nothing more than mastering the 100 most important
+                    real-life conversations
+                  </p>
                 </div>
                 <div class="footer-courses">
-                    <h4 class="footer-title">WordWander courses</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Learn English</a></li>
-                        <li><a href="#">Learn Kinyarwanda</a></li>
-                        <li><a href="#">Learn French</a></li>
-                    </ul>
+                  <h4 class="footer-title">WordWander courses</h4>
+                  <ul class="footer-links">
+                    <li><a href="#">Learn English</a></li>
+                    <li><a href="#">Learn Kinyarwanda</a></li>
+                    <li><a href="#">Learn French</a></li>
+                  </ul>
                 </div>
                 <div class="footer-products">
-                    <h4 class="footer-title">Products</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Landing page</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Contact us</a></li>
-                    </ul>
+                  <h4 class="footer-title">Products</h4>
+                  <ul class="footer-links">
+                    <li><a href="#">Landing page</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                  </ul>
                 </div>
                 <div class="footer-contact">
-                    <h4 class="footer-title">Contact information</h4>
-                    <ul class="contact-list">
-                        <li class="contact-item">
-                <img src="images/phone-icon.svg" alt="Phone" />
-                            <span>+34933478486</span>
-                        </li>
-                        <li class="contact-item">
-                            <span>Info@wordwander.co</span>
-                        </li>
-                        <li class="contact-item">
-                <img src="images/location-icon.svg" alt="Location" />
-                            <span>Kigali/ Rwanda</span>
-                        </li>
-                    </ul>
+                  <h4 class="footer-title">Contact information</h4>
+                  <ul class="contact-list">
+                    <li class="contact-item">
+                      <img src="images/phone-icon.svg" alt="Phone" />
+                      <span>+34933478486</span>
+                    </li>
+                    <li class="contact-item">
+                      <span>Info@wordwander.co</span>
+                    </li>
+                    <li class="contact-item">
+                      <img src="images/location-icon.svg" alt="Location" />
+                      <span>Kigali/ Rwanda</span>
+                    </li>
+                  </ul>
                 </div>
+              </div>
+              <div class="social-links">
+                <a href="#"><img src="images/Facebook.png" alt="Facebook" /></a>
+                <a href="#"><img src="images/LinkedIn.png" alt="LinkedIn" /></a>
+                <a href="#"><img src="images/Twitter.png" alt="Twitter" /></a>
+              </div>
             </div>
-            <div class="social-links">
-          <a href="#"><img src="images/Facebook.png" alt="Facebook" /></a>
-          <a href="#"><img src="images/LinkedIn.png" alt="LinkedIn" /></a>
-          <a href="#"><img src="images/Twitter.png" alt="Twitter" /></a>
-        </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-wrapper">
+            <div class="footer-bottom">
+              <div class="footer-wrapper">
                 <p class="copyright">2025 WordWander. All Rights Reserved.</p>
                 <div class="legal-links">
-                    <a href="#" class="legal-link">Terms & Conditions</a>
-                    <a href="#" class="legal-link">Privacy Policy</a>
+                  <a href="#" class="legal-link">Terms & Conditions</a>
+                  <a href="#" class="legal-link">Privacy Policy</a>
                 </div>
+              </div>
             </div>
-        </div>
-    </footer>
-        </div>
+          </footer>
+      
     </div>
 </body>
 </html>

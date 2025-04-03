@@ -11,6 +11,109 @@ $footer-height: 300px;
     min-height: calc(100vh - 80px - 300px); // Adjust based on header and footer height
     padding: 0 0 4rem;
 
+ .question-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 2rem;
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+
+            .option-btn {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem;
+                border: 2px solid rgba($text-dark, 0.1);
+                border-radius: 12px;
+                background: white;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    border-color: $primary-purple;
+                    transform: translateY(-2px);
+                }
+
+                &.correct {
+                    background: rgba(#4CAF50, 0.1);
+                    border-color: #4CAF50;
+                    pointer-events: none;
+
+                    .option-letter {
+                        background: #4CAF50;
+                        color: white;
+                    }
+                }
+
+                &.incorrect {
+                    background: rgba(#FF5252, 0.1);
+                    border-color: #FF5252;
+                    pointer-events: none;
+
+                    .option-letter {
+                        background: #FF5252;
+                        color: white;
+                    }
+                }
+
+                &.disabled {
+                    pointer-events: none;
+                    opacity: 0.7;
+                }
+
+                .option-letter {
+                    width: 36px;
+                    height: 36px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba($text-dark, 0.1);
+                    border-radius: 50%;
+                    font-weight: 600;
+                }
+
+                .option-text {
+                    font-size: 1.1rem;
+                    color: $text-dark;
+                }
+            }
+        }
+    }
+    .feedback-message {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        background: #4CAF50;
+        color: white;
+        font-weight: 500;
+        transform: translateX(200%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+        &.show {
+            transform: translateX(0);
+        }
+
+        &.correct {
+            background: #4CAF50;
+        }
+
+        &.incorrect {
+            background: #FF5252;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+    }
     .test-header {
         background: $primary-purple;
         padding: 1.5rem 0;

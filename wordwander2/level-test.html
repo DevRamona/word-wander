@@ -8,27 +8,31 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-          <div class="nav__logo">
-            <img src="images/logo.jpg" alt="WordWander">
-        </div>
-            <div class="nav__menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                    <li><a href="about.html">About us</a></li>
-                </ul>
-            </div>
-            <div class="nav__actions">
-
-                <a href="#" class="user-profile">
-                    <img src="images/2333.jpg" alt="Profile">
-                </a>
-            </div>
-        </nav>
-    </header>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__logo">
+        <img src="images/logo.jpg" alt="WordWander" />
+      </div>
+      <div class="nav__menu" id="navMenu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav__cta">
+        <div class="nav-profile">
+            <img src="images/2333.jpg" alt="Maya atay">
+                </div>
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
 
     <main class="level-test">
         <div class="test-header">
@@ -68,7 +72,7 @@
 
                 <div class="navigation-buttons">
                     <button class="nav-btn prev">PREVIOUS QUESTION</button>
-                    <button class="nav-btn next">NEXT QUESTION</button>
+                    <button class="nav-btn next">SUBMIT</button>
                 </div>
             </div>
 
@@ -136,5 +140,6 @@
           </div>
         </div>
       </footer>
+      <script src="js/level-test.js"></script> 
 </body>
 </html>
